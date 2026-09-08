@@ -30,7 +30,7 @@ const PROJETS_DATA = [
     categorie: "WEB",
     description:
       "Site web de réservation et de gestion de colis, d'ajouter, modifier ou effacer des conducteurs et les véhicules de transport.",
-    technologies: "HTML5, CSS3, JS, PHP",
+    technologies: "HTML5, CSS3, JavaScript, PHP",
     vignette: "iconjojohexpress.png",
     prefixe: "jojohexpress",
     lien: "https://github.com/Johanes-mg/JojohExpress",
@@ -89,6 +89,17 @@ const PROJETS_DATA = [
     prefixe: "jhotelkotlin",
     lien: "https://github.com/Johanes-mg/JHotel",
   },
+  {
+    id: "marv",
+    nom: "Marv",
+    categorie: "WEB",
+    description:
+      "Site vitrine pour un jeune producteur musical. Présentation de l'artiste, de ses services et de son univers musical.",
+    technologies: "HTML5, CSS3, JavaScript",
+    vignette: "iconmarv.png",
+    prefixe: "marv",
+    lien: "https://github.com/Johanes-mg/Marvonthbeat",
+  },
 ];
 
 const listeProjets = document.getElementById("liste-projets");
@@ -123,6 +134,13 @@ PROJETS_DATA.forEach(function (projet) {
 let lightboxImages = [];
 let lightboxIndex = 0;
 
+// ============ VARIABLES POUR LE SWIPE ============
+let touchStartX = 0;
+let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
+let isSwiping = false;
+
 function ouvrirLightboxProjet(projectId) {
   const projet = PROJETS_DATA.find((p) => p.id === projectId);
   if (!projet) return;
@@ -134,41 +152,46 @@ function ouvrirLightboxProjet(projectId) {
 
   if (!overlay || !image) return;
 
+  // Détecter automatiquement le nombre d'images disponibles
   const images = [];
-  for (let i = 1; i <= 20; i++) {
-    images.push(`./images/projet/${projet.prefixe}_${i}.png`);
+  let i = 1;
+
+  function verifierImageSuivante() {
+    const imgPath = `./images/projet/${projet.prefixe}_${i}.png`;
+    const img = new Image();
+    img.onload = function () {
+      images.push(imgPath);
+      i++;
+      verifierImageSuivante();
+    };
+    img.onerror = function () {
+      terminerDetection();
+    };
+    img.src = imgPath;
   }
-  lightboxImages = images;
-  lightboxIndex = 0;
 
-  image.src = `./images/projet/${projet.vignette}`;
-  if (titreEl) titreEl.textContent = projet.nom;
-  if (counterEl) counterEl.textContent = `1 / ${lightboxImages.length}`;
+  function terminerDetection() {
+    lightboxImages = images;
+    lightboxIndex = 0;
 
-  overlay.classList.add("actif");
-  document.body.style.overflow = "hidden";
-
-  trouverPremiereImage(images, 0, function (premiereImage) {
-    if (premiereImage) {
-      image.src = premiereImage;
+    if (images.length === 0) {
+      image.src = `./images/projet/${projet.vignette}`;
+      if (titreEl) titreEl.textContent = projet.nom;
+      if (counterEl) counterEl.textContent = "1 / 1";
+      overlay.classList.add("actif");
+      document.body.style.overflow = "hidden";
+      return;
     }
-  });
-}
 
-function trouverPremiereImage(images, index, callback) {
-  if (index >= images.length) {
-    callback(null);
-    return;
+    image.src = images[0];
+    if (titreEl) titreEl.textContent = projet.nom;
+    if (counterEl) counterEl.textContent = `1 / ${images.length}`;
+
+    overlay.classList.add("actif");
+    document.body.style.overflow = "hidden";
   }
 
-  const img = new Image();
-  img.onload = function () {
-    callback(images[index]);
-  };
-  img.onerror = function () {
-    trouverPremiereImage(images, index + 1, callback);
-  };
-  img.src = images[index];
+  verifierImageSuivante();
 }
 
 function fermerLightbox() {
@@ -209,6 +232,122 @@ function navLightbox(direction) {
   testImg.src = imgPath;
 }
 
+// ============ GESTION DU SWIPE TACTILE ============
+const lightboxOverlay = document.querySelector(".lightbox-overlay");
+const lightboxContent = document.querySelector(".lightbox-contenu");
+
+if (lightboxOverlay) {
+  lightboxOverlay.addEventListener(
+    "touchstart",
+    function (e) {
+      const touch = e.touches[0];
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+      isSwiping = false;
+    },
+    { passive: true },
+  );
+
+  lightboxOverlay.addEventListener(
+    "touchmove",
+    function (e) {
+      if (e.touches.length === 0) return;
+      const touch = e.touches[0];
+      touchEndX = touch.clientX;
+      touchEndY = touch.clientY;
+
+      const diffX = touchStartX - touchEndX;
+      const diffY = touchStartY - touchEndY;
+
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 30) {
+        isSwiping = true;
+        e.preventDefault();
+      }
+    },
+    { passive: false },
+  );
+
+  lightboxOverlay.addEventListener(
+    "touchend",
+    function (e) {
+      if (!isSwiping) return;
+
+      const diffX = touchStartX - touchEndX;
+
+      if (Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          navLightbox(1);
+        } else {
+          navLightbox(-1);
+        }
+      }
+
+      touchStartX = 0;
+      touchEndX = 0;
+      touchStartY = 0;
+      touchEndY = 0;
+      isSwiping = false;
+    },
+    { passive: true },
+  );
+}
+
+// ============ GESTION DU DRAG SOURIS ============
+let mouseStartX = 0;
+let mouseStartY = 0;
+let isDragging = false;
+
+if (lightboxOverlay) {
+  lightboxOverlay.addEventListener("mousedown", function (e) {
+    if (e.target.closest("button")) return;
+    mouseStartX = e.clientX;
+    mouseStartY = e.clientY;
+    isDragging = false;
+  });
+
+  lightboxOverlay.addEventListener("mousemove", function (e) {
+    if (mouseStartX === 0 && mouseStartY === 0) return;
+    const diffX = mouseStartX - e.clientX;
+    const diffY = mouseStartY - e.clientY;
+
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 30) {
+      isDragging = true;
+    }
+  });
+
+  lightboxOverlay.addEventListener("mouseup", function (e) {
+    if (mouseStartX === 0 && mouseStartY === 0) return;
+    if (!isDragging) {
+      if (e.target === lightboxOverlay) {
+        fermerLightbox();
+      }
+      mouseStartX = 0;
+      mouseStartY = 0;
+      isDragging = false;
+      return;
+    }
+
+    const diffX = mouseStartX - e.clientX;
+    if (Math.abs(diffX) > 50) {
+      if (diffX > 0) {
+        navLightbox(1);
+      } else {
+        navLightbox(-1);
+      }
+    }
+
+    mouseStartX = 0;
+    mouseStartY = 0;
+    isDragging = false;
+  });
+
+  lightboxOverlay.addEventListener("mouseleave", function () {
+    mouseStartX = 0;
+    mouseStartY = 0;
+    isDragging = false;
+  });
+}
+
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
     fermerLightbox();
@@ -228,7 +367,7 @@ document.addEventListener("keydown", function (e) {
 const overlay = document.querySelector(".lightbox-overlay");
 if (overlay) {
   overlay.addEventListener("click", function (e) {
-    if (e.target === this) {
+    if (e.target === this && !isDragging) {
       fermerLightbox();
     }
   });
