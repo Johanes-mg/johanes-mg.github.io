@@ -98,7 +98,7 @@ const PROJETS_DATA = [
     technologies: "HTML5, CSS3, JavaScript",
     vignette: "iconmarv.png",
     prefixe: "marv",
-    lien: "https://johanes-mg.github.io/Marvonthbeat/",
+    lien: "https://johanes-mg.github.io/Marvonthebeat/",
   },
 ];
 
