@@ -1,17 +1,22 @@
 "use strict";
 
-const basculerClasse = function (e) {
-  e.classList.toggle("actif");
-};
+// ============================================================
+// 1. UTILITAIRES
+// ============================================================
+const basculerClasse = (el) => el.classList.toggle("actif");
 
+// ============================================================
+// 2. BARRE LATÉRALE (ouverture / fermeture)
+// ============================================================
 const barreLaterale = document.querySelector("[data-barre]");
 const boutonInfo = document.querySelector("[data-btn-info]");
 if (boutonInfo) {
-  boutonInfo.addEventListener("click", function () {
-    basculerClasse(barreLaterale);
-  });
+  boutonInfo.addEventListener("click", () => basculerClasse(barreLaterale));
 }
 
+// ============================================================
+// 3. DONNÉES DES PROJETS
+// ============================================================
 const PROJETS_DATA = [
   {
     id: "ramp",
@@ -102,6 +107,9 @@ const PROJETS_DATA = [
   },
 ];
 
+// ============================================================
+// 4. GÉNÉRATION DES PROJETS
+// ============================================================
 const listeProjets = document.getElementById("liste-projets");
 
 function genererProjetHTML(projet) {
@@ -110,9 +118,9 @@ function genererProjetHTML(projet) {
       <a href="#" onclick="ouvrirLightboxProjet('${projet.id}'); return false;" aria-label="Voir le projet ${projet.nom}">
         <figure class="image-projet">
           <div class="icone-oeil">
-            <img src="./images/search.png" width="24" height="24" loading="lazy" />
+            <img src="./images/search.png" width="24" height="24" loading="lazy" alt="Zoom" />
           </div>
-          <img src="./images/projet/${projet.vignette}" loading="lazy" width="640" height="360" />
+          <img src="./images/projet/${projet.vignette}" loading="lazy" width="640" height="360" alt="${projet.nom}" />
         </figure>
         <h3 class="titre-projet">${projet.nom}</h3>
         <p class="categorie-projet">${projet.categorie} - ${projet.technologies}</p>
@@ -127,46 +135,41 @@ function genererProjetHTML(projet) {
   `;
 }
 
-PROJETS_DATA.forEach(function (projet) {
+PROJETS_DATA.forEach((projet) => {
   listeProjets.innerHTML += genererProjetHTML(projet);
 });
 
+// ============================================================
+// 5. LIGHTBOX PROJETS
+// ============================================================
 let lightboxImages = [];
 let lightboxIndex = 0;
+let isLightboxProjet = false;
 
-// ============ VARIABLES POUR LE SWIPE ============
-let touchStartX = 0;
-let touchEndX = 0;
-let touchStartY = 0;
-let touchEndY = 0;
-let isSwiping = false;
+// Éléments DOM de la lightbox
+const lightboxOverlay = document.querySelector(".lightbox-overlay");
+const lightboxImage = document.getElementById("lightbox-image");
+const lightboxTitre = document.getElementById("lightbox-titre");
+const lightboxCounter = document.getElementById("lightbox-counter");
+const navButtons = document.querySelectorAll(".btn-nav-lightbox");
 
 function ouvrirLightboxProjet(projectId) {
   const projet = PROJETS_DATA.find((p) => p.id === projectId);
   if (!projet) return;
 
-  const overlay = document.querySelector(".lightbox-overlay");
-  const image = document.getElementById("lightbox-image");
-  const titreEl = document.getElementById("lightbox-titre");
-  const counterEl = document.getElementById("lightbox-counter");
-
-  if (!overlay || !image) return;
-
-  // Détecter automatiquement le nombre d'images disponibles
+  isLightboxProjet = true;
   const images = [];
   let i = 1;
 
   function verifierImageSuivante() {
     const imgPath = `./images/projet/${projet.prefixe}_${i}.png`;
     const img = new Image();
-    img.onload = function () {
+    img.onload = () => {
       images.push(imgPath);
       i++;
       verifierImageSuivante();
     };
-    img.onerror = function () {
-      terminerDetection();
-    };
+    img.onerror = () => terminerDetection();
     img.src = imgPath;
   }
 
@@ -174,20 +177,19 @@ function ouvrirLightboxProjet(projectId) {
     lightboxImages = images;
     lightboxIndex = 0;
 
+    navButtons.forEach((btn) => (btn.style.display = "flex"));
+
     if (images.length === 0) {
-      image.src = `./images/projet/${projet.vignette}`;
-      if (titreEl) titreEl.textContent = projet.nom;
-      if (counterEl) counterEl.textContent = "1 / 1";
-      overlay.classList.add("actif");
-      document.body.style.overflow = "hidden";
-      return;
+      lightboxImage.src = `./images/projet/${projet.vignette}`;
+      lightboxTitre.textContent = projet.nom;
+      lightboxCounter.textContent = "1 / 1";
+    } else {
+      lightboxImage.src = images[0];
+      lightboxTitre.textContent = projet.nom;
+      lightboxCounter.textContent = `1 / ${images.length}`;
     }
 
-    image.src = images[0];
-    if (titreEl) titreEl.textContent = projet.nom;
-    if (counterEl) counterEl.textContent = `1 / ${images.length}`;
-
-    overlay.classList.add("actif");
+    lightboxOverlay.classList.add("actif");
     document.body.style.overflow = "hidden";
   }
 
@@ -195,226 +197,202 @@ function ouvrirLightboxProjet(projectId) {
 }
 
 function fermerLightbox() {
-  const overlay = document.querySelector(".lightbox-overlay");
-  if (!overlay) return;
-  overlay.classList.remove("actif");
+  lightboxOverlay.classList.remove("actif");
   document.body.style.overflow = "";
   lightboxImages = [];
   lightboxIndex = 0;
+  isLightboxProjet = false;
+  navButtons.forEach((btn) => (btn.style.display = "flex"));
 }
 
 function navLightbox(direction) {
   if (lightboxImages.length === 0) return;
 
-  const image = document.getElementById("lightbox-image");
-  const counterEl = document.getElementById("lightbox-counter");
-
-  if (!image) return;
-
   lightboxIndex += direction;
-
-  if (lightboxIndex < 0) {
-    lightboxIndex = lightboxImages.length - 1;
-  } else if (lightboxIndex >= lightboxImages.length) {
-    lightboxIndex = 0;
-  }
+  if (lightboxIndex < 0) lightboxIndex = lightboxImages.length - 1;
+  if (lightboxIndex >= lightboxImages.length) lightboxIndex = 0;
 
   const imgPath = lightboxImages[lightboxIndex];
   const testImg = new Image();
-  testImg.onload = function () {
-    image.src = imgPath;
-    if (counterEl)
-      counterEl.textContent = `${lightboxIndex + 1} / ${lightboxImages.length}`;
+  testImg.onload = () => {
+    lightboxImage.src = imgPath;
+    lightboxCounter.textContent = `${lightboxIndex + 1} / ${lightboxImages.length}`;
   };
-  testImg.onerror = function () {
-    navLightbox(direction > 0 ? 1 : -1);
-  };
+  testImg.onerror = () => navLightbox(direction > 0 ? 1 : -1);
   testImg.src = imgPath;
 }
 
-// ============ GESTION DU SWIPE TACTILE ============
-const lightboxOverlay = document.querySelector(".lightbox-overlay");
-const lightboxContent = document.querySelector(".lightbox-contenu");
+// ============================================================
+// 6. LIGHTBOX PHOTO DE PROFIL
+// ============================================================
+const avatar = document.querySelector(".cadre-avatar img");
 
-if (lightboxOverlay) {
-  lightboxOverlay.addEventListener(
-    "touchstart",
-    function (e) {
-      const touch = e.touches[0];
-      touchStartX = touch.clientX;
-      touchStartY = touch.clientY;
-      isSwiping = false;
-    },
-    { passive: true },
-  );
+if (avatar && lightboxOverlay) {
+  avatar.addEventListener("click", (e) => {
+    e.stopPropagation();
 
-  lightboxOverlay.addEventListener(
-    "touchmove",
-    function (e) {
-      if (e.touches.length === 0) return;
-      const touch = e.touches[0];
-      touchEndX = touch.clientX;
-      touchEndY = touch.clientY;
+    isLightboxProjet = false;
+    lightboxImage.src = avatar.src;
+    lightboxTitre.textContent = "Photo de profil";
+    lightboxCounter.textContent = "1 / 1";
 
-      const diffX = touchStartX - touchEndX;
-      const diffY = touchStartY - touchEndY;
+    // Masquer les boutons de navigation (une seule image)
+    navButtons.forEach((btn) => (btn.style.display = "none"));
 
-      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 30) {
-        isSwiping = true;
-        e.preventDefault();
-      }
-    },
-    { passive: false },
-  );
-
-  lightboxOverlay.addEventListener(
-    "touchend",
-    function (e) {
-      if (!isSwiping) return;
-
-      const diffX = touchStartX - touchEndX;
-
-      if (Math.abs(diffX) > 50) {
-        if (diffX > 0) {
-          navLightbox(1);
-        } else {
-          navLightbox(-1);
-        }
-      }
-
-      touchStartX = 0;
-      touchEndX = 0;
-      touchStartY = 0;
-      touchEndY = 0;
-      isSwiping = false;
-    },
-    { passive: true },
-  );
+    lightboxOverlay.classList.add("actif");
+    document.body.style.overflow = "hidden";
+  });
 }
 
-// ============ GESTION DU DRAG SOURIS ============
-let mouseStartX = 0;
-let mouseStartY = 0;
-let isDragging = false;
+// ============================================================
+// 7. GESTION DE LA LIGHTBOX (clics, touches, swipe, drag)
+// ============================================================
 
-if (lightboxOverlay) {
-  lightboxOverlay.addEventListener("mousedown", function (e) {
-    if (e.target.closest("button")) return;
-    mouseStartX = e.clientX;
-    mouseStartY = e.clientY;
-    isDragging = false;
-  });
+// --- Fermeture ---
+document
+  .querySelector(".btn-fermer-lightbox")
+  ?.addEventListener("click", fermerLightbox);
 
-  lightboxOverlay.addEventListener("mousemove", function (e) {
-    if (mouseStartX === 0 && mouseStartY === 0) return;
-    const diffX = mouseStartX - e.clientX;
-    const diffY = mouseStartY - e.clientY;
+// --- Clic sur l'overlay (pour fermer) ---
+lightboxOverlay?.addEventListener("click", (e) => {
+  if (e.target === lightboxOverlay) fermerLightbox();
+});
 
+// --- Touches clavier ---
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") return fermerLightbox();
+  if (!lightboxOverlay.classList.contains("actif")) return;
+  if (e.key === "ArrowLeft") navLightbox(-1);
+  if (e.key === "ArrowRight") navLightbox(1);
+});
+
+// --- Swipe tactile ---
+let touchStartX = 0,
+  touchStartY = 0,
+  touchEndX = 0,
+  touchEndY = 0,
+  isSwiping = false;
+
+lightboxOverlay?.addEventListener(
+  "touchstart",
+  (e) => {
+    const touch = e.touches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    isSwiping = false;
+  },
+  { passive: true },
+);
+
+lightboxOverlay?.addEventListener(
+  "touchmove",
+  (e) => {
+    if (e.touches.length === 0) return;
+    const touch = e.touches[0];
+    touchEndX = touch.clientX;
+    touchEndY = touch.clientY;
+    const diffX = touchStartX - touchEndX;
+    const diffY = touchStartY - touchEndY;
     if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 30) {
-      isDragging = true;
+      isSwiping = true;
+      e.preventDefault();
     }
-  });
+  },
+  { passive: false },
+);
 
-  lightboxOverlay.addEventListener("mouseup", function (e) {
-    if (mouseStartX === 0 && mouseStartY === 0) return;
-    if (!isDragging) {
-      if (e.target === lightboxOverlay) {
-        fermerLightbox();
-      }
-      mouseStartX = 0;
-      mouseStartY = 0;
-      isDragging = false;
-      return;
-    }
-
-    const diffX = mouseStartX - e.clientX;
+lightboxOverlay?.addEventListener(
+  "touchend",
+  () => {
+    if (!isSwiping) return;
+    const diffX = touchStartX - touchEndX;
     if (Math.abs(diffX) > 50) {
-      if (diffX > 0) {
-        navLightbox(1);
-      } else {
-        navLightbox(-1);
-      }
+      navLightbox(diffX > 0 ? 1 : -1);
     }
+    touchStartX = touchEndX = touchStartY = touchEndY = 0;
+    isSwiping = false;
+  },
+  { passive: true },
+);
 
-    mouseStartX = 0;
-    mouseStartY = 0;
-    isDragging = false;
-  });
+// --- Drag souris ---
+let mouseStartX = 0,
+  mouseStartY = 0,
+  isDragging = false;
 
-  lightboxOverlay.addEventListener("mouseleave", function () {
-    mouseStartX = 0;
-    mouseStartY = 0;
-    isDragging = false;
-  });
-}
+lightboxOverlay?.addEventListener("mousedown", (e) => {
+  if (e.target.closest("button")) return;
+  mouseStartX = e.clientX;
+  mouseStartY = e.clientY;
+  isDragging = false;
+});
 
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    fermerLightbox();
-  } else if (
-    e.key === "ArrowLeft" &&
-    document.querySelector(".lightbox-overlay.actif")
-  ) {
-    navLightbox(-1);
-  } else if (
-    e.key === "ArrowRight" &&
-    document.querySelector(".lightbox-overlay.actif")
-  ) {
-    navLightbox(1);
+lightboxOverlay?.addEventListener("mousemove", (e) => {
+  if (mouseStartX === 0 && mouseStartY === 0) return;
+  const diffX = mouseStartX - e.clientX;
+  const diffY = mouseStartY - e.clientY;
+  if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 30) {
+    isDragging = true;
   }
 });
 
-const overlay = document.querySelector(".lightbox-overlay");
-if (overlay) {
-  overlay.addEventListener("click", function (e) {
-    if (e.target === this && !isDragging) {
-      fermerLightbox();
-    }
-  });
-}
+lightboxOverlay?.addEventListener("mouseup", (e) => {
+  if (mouseStartX === 0 && mouseStartY === 0) return;
+  if (!isDragging) {
+    if (e.target === lightboxOverlay) fermerLightbox();
+    mouseStartX = mouseStartY = 0;
+    isDragging = false;
+    return;
+  }
+  const diffX = mouseStartX - e.clientX;
+  if (Math.abs(diffX) > 50) {
+    navLightbox(diffX > 0 ? 1 : -1);
+  }
+  mouseStartX = mouseStartY = 0;
+  isDragging = false;
+});
 
+lightboxOverlay?.addEventListener("mouseleave", () => {
+  mouseStartX = mouseStartY = 0;
+  isDragging = false;
+});
+
+// ============================================================
+// 8. FILTRES PROJETS
+// ============================================================
 const selectFiltre = document.querySelector("[data-select]");
 const itemsSelect = document.querySelectorAll("[data-select-item]");
 const valeurSelect = document.querySelector("[data-select-valeur]");
 const boutonsFiltre = document.querySelectorAll("[data-btn-filtre]");
 const itemsProjets = document.querySelectorAll("[data-filtre-item]");
 
-if (selectFiltre) {
-  selectFiltre.addEventListener("click", function () {
-    basculerClasse(this);
-    const expanded =
-      this.getAttribute("aria-expanded") === "true" ? "false" : "true";
-    this.setAttribute("aria-expanded", expanded);
-  });
-}
+selectFiltre?.addEventListener("click", function () {
+  basculerClasse(this);
+  const expanded =
+    this.getAttribute("aria-expanded") === "true" ? "false" : "true";
+  this.setAttribute("aria-expanded", expanded);
+});
 
-const filtrerProjets = function (categorie) {
-  itemsProjets.forEach(function (projet) {
-    const categorieProjet = projet.dataset.categorie;
-    if (categorie === "tous" || categorie === categorieProjet) {
-      projet.classList.add("actif");
-    } else {
-      projet.classList.remove("actif");
-    }
+const filtrerProjets = (categorie) => {
+  itemsProjets.forEach((projet) => {
+    const cat = projet.dataset.categorie;
+    projet.classList.toggle("actif", categorie === "tous" || categorie === cat);
   });
 };
 
-itemsSelect.forEach(function (item) {
+itemsSelect.forEach((item) => {
   item.addEventListener("click", function () {
     const categorie = this.dataset.categorie || this.textContent.toLowerCase();
     valeurSelect.textContent = this.textContent;
     basculerClasse(selectFiltre);
-    if (selectFiltre) {
-      selectFiltre.setAttribute("aria-expanded", "false");
-    }
+    selectFiltre?.setAttribute("aria-expanded", "false");
     filtrerProjets(categorie);
 
-    boutonsFiltre.forEach(function (btn) {
+    boutonsFiltre.forEach((btn) => {
       btn.classList.remove("actif");
       btn.setAttribute("aria-selected", "false");
-      const btnCategorie =
-        btn.dataset.categorie || btn.textContent.toLowerCase();
-      if (btnCategorie === categorie) {
+      const btnCat = btn.dataset.categorie || btn.textContent.toLowerCase();
+      if (btnCat === categorie) {
         btn.classList.add("actif");
         btn.setAttribute("aria-selected", "true");
       }
@@ -423,7 +401,7 @@ itemsSelect.forEach(function (item) {
 });
 
 let dernierBoutonClique = boutonsFiltre[0];
-boutonsFiltre.forEach(function (btn) {
+boutonsFiltre.forEach((btn) => {
   btn.addEventListener("click", function () {
     const categorie = this.dataset.categorie || this.textContent.toLowerCase();
     valeurSelect.textContent = this.textContent;
@@ -436,6 +414,9 @@ boutonsFiltre.forEach(function (btn) {
   });
 });
 
+// ============================================================
+// 9. CONTACT - SWITCH (WhatsApp / Gmail / LinkedIn)
+// ============================================================
 const switchOptions = document.querySelectorAll("[data-switch]");
 const switchCurseur = document.querySelector("[data-switch-curseur]");
 const btnContact = document.querySelector("[data-btn-contact]");
@@ -467,11 +448,8 @@ const INFOS = {
 let methodeActuelle = "whatsapp";
 
 function mettreAJourSwitch(methode) {
-  switchOptions.forEach(function (opt) {
-    opt.classList.remove("actif");
-    if (opt.dataset.switch === methode) {
-      opt.classList.add("actif");
-    }
+  switchOptions.forEach((opt) => {
+    opt.classList.toggle("actif", opt.dataset.switch === methode);
   });
 
   switchCurseur.classList.remove(
@@ -479,25 +457,20 @@ function mettreAJourSwitch(methode) {
     "position-centre",
     "position-droite",
   );
-
-  if (methode === "gmail") {
-    switchCurseur.classList.add("position-gauche");
-  } else if (methode === "whatsapp") {
+  if (methode === "gmail") switchCurseur.classList.add("position-gauche");
+  else if (methode === "whatsapp")
     switchCurseur.classList.add("position-centre");
-  } else if (methode === "linkedin") {
+  else if (methode === "linkedin")
     switchCurseur.classList.add("position-droite");
-  }
 
   methodeActuelle = methode;
 
-  if (btnContact) {
-    btnContact.classList.remove(
-      "methode-whatsapp",
-      "methode-gmail",
-      "methode-linkedin",
-    );
-    btnContact.classList.add("methode-" + methode);
-  }
+  btnContact?.classList.remove(
+    "methode-whatsapp",
+    "methode-gmail",
+    "methode-linkedin",
+  );
+  btnContact?.classList.add("methode-" + methode);
 
   const info = INFOS[methode];
   if (badgeIcon) badgeIcon.src = info.icone;
@@ -505,51 +478,53 @@ function mettreAJourSwitch(methode) {
   if (badgeValeur) badgeValeur.textContent = info.valeur;
 }
 
-switchOptions.forEach(function (option) {
-  option.addEventListener("click", function () {
-    const methode = this.dataset.switch;
-    mettreAJourSwitch(methode);
-  });
+switchOptions.forEach((option) => {
+  option.addEventListener("click", () =>
+    mettreAJourSwitch(option.dataset.switch),
+  );
 });
 
 mettreAJourSwitch("whatsapp");
 
-if (btnContact) {
-  btnContact.addEventListener("click", function () {
-    const info = INFOS[methodeActuelle];
-    if (info) {
-      window.open(info.url, "_blank");
-    }
-  });
-}
+btnContact?.addEventListener("click", () => {
+  const info = INFOS[methodeActuelle];
+  if (info) window.open(info.url, "_blank");
+});
 
+// ============================================================
+// 10. NAVIGATION ENTRE LES PAGES
+// ============================================================
 const liensNavigation = document.querySelectorAll("[data-page-nav]");
 const pages = document.querySelectorAll("[data-page]");
 
-liensNavigation.forEach(function (lien) {
+liensNavigation.forEach((lien) => {
   lien.addEventListener("click", function () {
     const nomPage = this.textContent.toLowerCase().trim();
-    pages.forEach(function (page) {
+
+    pages.forEach((page) => {
       const nomPageActuelle = page.dataset.page.toLowerCase().trim();
-      if (nomPage === nomPageActuelle) {
-        page.classList.add("actif");
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
-        page.classList.remove("actif");
-      }
+      page.classList.toggle("actif", nomPage === nomPageActuelle);
     });
-    liensNavigation.forEach(function (nav) {
+
+    liensNavigation.forEach((nav) => {
       nav.classList.remove("actif");
       nav.removeAttribute("aria-current");
     });
+
     this.classList.add("actif");
     this.setAttribute("aria-current", "page");
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
     if (window.innerWidth < 1024 && barreLaterale) {
       barreLaterale.classList.remove("actif");
     }
   });
 });
 
+// ============================================================
+// 11. THÈME (clair / sombre)
+// ============================================================
 let themeSombre = true;
 
 function basculerTheme() {
@@ -557,33 +532,25 @@ function basculerTheme() {
   const themeIcon = document.getElementById("theme-icon");
   if (themeSombre) {
     body.classList.add("theme-clair");
-    if (themeIcon) {
-      themeIcon.src = "./images/icone-lune.png";
-    }
+    if (themeIcon) themeIcon.src = "./images/icone-lune.png";
     themeSombre = false;
   } else {
     body.classList.remove("theme-clair");
-    if (themeIcon) {
-      themeIcon.src = "./images/icone-soleil.png";
-    }
+    if (themeIcon) themeIcon.src = "./images/icone-soleil.png";
     themeSombre = true;
   }
   try {
     localStorage.setItem("theme", themeSombre ? "sombre" : "clair");
-  } catch (error) {
-    console.warn("LocalStorage non disponible");
-  }
+  } catch (_) {}
 }
 
 try {
-  const themeSauvegarde = localStorage.getItem("theme");
-  if (themeSauvegarde === "clair") {
-    basculerTheme();
-  }
-} catch (error) {
-  console.warn("LocalStorage non disponible");
-}
+  if (localStorage.getItem("theme") === "clair") basculerTheme();
+} catch (_) {}
 
+// ============================================================
+// 12. TÉLÉCHARGEMENT DU CV
+// ============================================================
 const NOM_FICHIER_CV = "RANAIVOJAONA Falitiana Johanes.pdf";
 
 function telechargerCV() {
