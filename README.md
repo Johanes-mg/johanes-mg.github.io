@@ -12,7 +12,7 @@
 
 ## 🍀 À propos de moi
 
-Je suis RANAIVOJAONA Johanès Falitiana, un étudiant en 2ème année **d'Informatique Général** à **l'Ecole Nationale d'Informatique de Fianarantsoa**, passionné par le développement d'applications Web, Mobile et Desktop et l'exploration des pratiques de développement modernes.
+Je suis RANAIVOJAONA Falitiana Johanès, un étudiant en 2ème année **d'Informatique Général** à **l'Ecole Nationale d'Informatique de Fianarantsoa**, passionné par le développement d'applications Web, Mobile et Desktop et l'exploration des pratiques de développement modernes.
 
 _"🎨Colorons le monde au-delà des lignes"_
 
