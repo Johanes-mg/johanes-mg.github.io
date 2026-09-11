@@ -1,22 +1,13 @@
 "use strict";
 
-// ============================================================
-// 1. UTILITAIRES
-// ============================================================
 const basculerClasse = (el) => el.classList.toggle("actif");
 
-// ============================================================
-// 2. BARRE LATÉRALE (ouverture / fermeture)
-// ============================================================
 const barreLaterale = document.querySelector("[data-barre]");
 const boutonInfo = document.querySelector("[data-btn-info]");
 if (boutonInfo) {
   boutonInfo.addEventListener("click", () => basculerClasse(barreLaterale));
 }
 
-// ============================================================
-// 3. DONNÉES DES PROJETS
-// ============================================================
 const PROJETS_DATA = [
   {
     id: "ramp",
@@ -103,13 +94,21 @@ const PROJETS_DATA = [
     technologies: "HTML5, CSS3, JavaScript",
     vignette: "iconmarv.png",
     prefixe: "marv",
-    lien: "https://johanes-mg.github.io/Marvonthebeat/",
+    lien: "https://marvnathanael-4kgx.vercel.app/",
+  },
+  {
+    id: "julieanna",
+    nom: "Julieanna",
+    categorie: "WEB",
+    description:
+      "Site vitrine présentant le parcours, les formations et les compétences d'une consultante en administration des affaires.",
+    technologies: "HTML5, CSS3, JavaScript",
+    vignette: "iconjulieanna.png",
+    prefixe: "julieanna",
+    lien: "https://julieanna.vercel.app/",
   },
 ];
 
-// ============================================================
-// 4. GÉNÉRATION DES PROJETS
-// ============================================================
 const listeProjets = document.getElementById("liste-projets");
 
 function genererProjetHTML(projet) {
@@ -118,7 +117,7 @@ function genererProjetHTML(projet) {
       <a href="#" onclick="ouvrirLightboxProjet('${projet.id}'); return false;" aria-label="Voir le projet ${projet.nom}">
         <figure class="image-projet">
           <div class="icone-oeil">
-            <img src="./images/search.png" width="24" height="24" loading="lazy" alt="Zoom" />
+            <img src="./images/search.png" width="32" height="32" loading="lazy" alt="Zoom" />
           </div>
           <img src="./images/projet/${projet.vignette}" loading="lazy" width="640" height="360" alt="${projet.nom}" />
         </figure>
@@ -139,14 +138,10 @@ PROJETS_DATA.forEach((projet) => {
   listeProjets.innerHTML += genererProjetHTML(projet);
 });
 
-// ============================================================
-// 5. LIGHTBOX PROJETS
-// ============================================================
 let lightboxImages = [];
 let lightboxIndex = 0;
 let isLightboxProjet = false;
 
-// Éléments DOM de la lightbox
 const lightboxOverlay = document.querySelector(".lightbox-overlay");
 const lightboxImage = document.getElementById("lightbox-image");
 const lightboxTitre = document.getElementById("lightbox-titre");
@@ -222,9 +217,6 @@ function navLightbox(direction) {
   testImg.src = imgPath;
 }
 
-// ============================================================
-// 6. LIGHTBOX PHOTO DE PROFIL
-// ============================================================
 const avatar = document.querySelector(".cadre-avatar img");
 
 if (avatar && lightboxOverlay) {
@@ -236,7 +228,6 @@ if (avatar && lightboxOverlay) {
     lightboxTitre.textContent = "Photo de profil";
     lightboxCounter.textContent = "1 / 1";
 
-    // Masquer les boutons de navigation (une seule image)
     navButtons.forEach((btn) => (btn.style.display = "none"));
 
     lightboxOverlay.classList.add("actif");
@@ -244,21 +235,14 @@ if (avatar && lightboxOverlay) {
   });
 }
 
-// ============================================================
-// 7. GESTION DE LA LIGHTBOX (clics, touches, swipe, drag)
-// ============================================================
-
-// --- Fermeture ---
 document
   .querySelector(".btn-fermer-lightbox")
   ?.addEventListener("click", fermerLightbox);
 
-// --- Clic sur l'overlay (pour fermer) ---
 lightboxOverlay?.addEventListener("click", (e) => {
   if (e.target === lightboxOverlay) fermerLightbox();
 });
 
-// --- Touches clavier ---
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") return fermerLightbox();
   if (!lightboxOverlay.classList.contains("actif")) return;
@@ -266,7 +250,6 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") navLightbox(1);
 });
 
-// --- Swipe tactile ---
 let touchStartX = 0,
   touchStartY = 0,
   touchEndX = 0,
@@ -315,7 +298,6 @@ lightboxOverlay?.addEventListener(
   { passive: true },
 );
 
-// --- Drag souris ---
 let mouseStartX = 0,
   mouseStartY = 0,
   isDragging = false;
@@ -357,9 +339,6 @@ lightboxOverlay?.addEventListener("mouseleave", () => {
   isDragging = false;
 });
 
-// ============================================================
-// 8. FILTRES PROJETS
-// ============================================================
 const selectFiltre = document.querySelector("[data-select]");
 const itemsSelect = document.querySelectorAll("[data-select-item]");
 const valeurSelect = document.querySelector("[data-select-valeur]");
@@ -414,9 +393,6 @@ boutonsFiltre.forEach((btn) => {
   });
 });
 
-// ============================================================
-// 9. CONTACT - SWITCH (WhatsApp / Gmail / LinkedIn)
-// ============================================================
 const switchOptions = document.querySelectorAll("[data-switch]");
 const switchCurseur = document.querySelector("[data-switch-curseur]");
 const btnContact = document.querySelector("[data-btn-contact]");
@@ -426,10 +402,10 @@ const badgeValeur = document.getElementById("badge-valeur");
 
 const INFOS = {
   whatsapp: {
-    icone: "./images/telephone.png",
+    icone: "./images/whatsapp.png",
     methode: "WhatsApp",
-    valeur: "+261 38 75 879 59",
-    url: "https://wa.me/261387587959",
+    valeur: "+261 33 54 297 82",
+    url: "https://wa.me/261335429782",
   },
   gmail: {
     icone: "./images/gmail.png",
@@ -491,9 +467,6 @@ btnContact?.addEventListener("click", () => {
   if (info) window.open(info.url, "_blank");
 });
 
-// ============================================================
-// 10. NAVIGATION ENTRE LES PAGES
-// ============================================================
 const liensNavigation = document.querySelectorAll("[data-page-nav]");
 const pages = document.querySelectorAll("[data-page]");
 
@@ -522,9 +495,6 @@ liensNavigation.forEach((lien) => {
   });
 });
 
-// ============================================================
-// 11. THÈME (clair / sombre)
-// ============================================================
 let themeSombre = true;
 
 function basculerTheme() {
@@ -548,9 +518,6 @@ try {
   if (localStorage.getItem("theme") === "clair") basculerTheme();
 } catch (_) {}
 
-// ============================================================
-// 12. TÉLÉCHARGEMENT DU CV
-// ============================================================
 const NOM_FICHIER_CV = "RANAIVOJAONA Falitiana Johanes.pdf";
 
 function telechargerCV() {
