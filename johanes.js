@@ -117,9 +117,9 @@ function genererProjetHTML(projet) {
       <a href="#" onclick="ouvrirLightboxProjet('${projet.id}'); return false;" aria-label="Voir le projet ${projet.nom}">
         <figure class="image-projet">
           <div class="icone-oeil">
-            <img src="./images/search.png" width="32" height="32" loading="lazy" alt="Zoom" />
+            <img src="./images/search.png" width="32" height="32" alt="" loading="lazy" />
           </div>
-          <img src="./images/projet/${projet.vignette}" loading="lazy" width="640" height="360" alt="${projet.nom}" />
+          <img src="./images/projet/${projet.vignette}" loading="lazy" width="640" height="360" alt="" />
         </figure>
         <h3 class="titre-projet">${projet.nom}</h3>
         <p class="categorie-projet">${projet.categorie} - ${projet.technologies}</p>
