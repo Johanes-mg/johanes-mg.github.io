@@ -778,7 +778,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 8px;
   padding: 10px 0;
 }
 
@@ -952,13 +952,25 @@ main {
   word-break: break-word;
 }
 
-.illustration-contact {
-  display: block;
+.illustration-contact-wrapper {
+  position: relative;
   width: 100%;
   max-width: 320px;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+.illustration-contact {
+  width: 100%;
   height: auto;
-  margin: 20px auto 0 auto;
   object-fit: contain;
+  display: none;
+}
+
+.contact-section.methode-whatsapp .illustration-whatsapp,
+.contact-section.methode-gmail .illustration-gmail,
+.contact-section.methode-linkedin .illustration-linkedin {
+  display: block;
 }
 
 .lightbox-overlay {
@@ -1639,7 +1651,7 @@ body.theme-clair .item-ligne-temps:first-child::before {
   .badge-valeur {
     font-size: 15px;
   }
-  .illustration-contact {
+  .illustration-contact-wrapper {
     max-width: 400px;
   }
   .liste-competences {
@@ -1855,7 +1867,7 @@ body.theme-clair .item-ligne-temps:first-child::before {
   .badge-valeur {
     font-size: 15px;
   }
-  .illustration-contact {
+  .illustration-contact-wrapper {
     max-width: 450px;
   }
   .liste-competences {

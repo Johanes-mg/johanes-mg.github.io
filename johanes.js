@@ -448,6 +448,16 @@ function mettreAJourSwitch(methode) {
   );
   btnContact?.classList.add("methode-" + methode);
 
+  const contactSection = document.querySelector(".contact-section");
+  if (contactSection) {
+    contactSection.classList.remove(
+      "methode-whatsapp",
+      "methode-gmail",
+      "methode-linkedin",
+    );
+    contactSection.classList.add("methode-" + methode);
+  }
+
   const info = INFOS[methode];
   if (badgeIcon) badgeIcon.src = info.icone;
   if (badgeMethode) badgeMethode.textContent = info.methode;
