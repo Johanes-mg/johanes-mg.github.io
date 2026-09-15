@@ -255,6 +255,10 @@ main {
   flex-wrap: wrap;
 }
 
+.item-reseau a {
+  display: block;
+}
+
 .item-reseau img {
   width: 28px;
   height: 28px;
