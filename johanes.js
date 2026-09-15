@@ -343,7 +343,6 @@ const selectFiltre = document.querySelector("[data-select]");
 const itemsSelect = document.querySelectorAll("[data-select-item]");
 const valeurSelect = document.querySelector("[data-select-valeur]");
 const boutonsFiltre = document.querySelectorAll("[data-btn-filtre]");
-const itemsProjets = document.querySelectorAll("[data-filtre-item]");
 
 selectFiltre?.addEventListener("click", function () {
   basculerClasse(this);
@@ -353,6 +352,7 @@ selectFiltre?.addEventListener("click", function () {
 });
 
 const filtrerProjets = (categorie) => {
+  const itemsProjets = document.querySelectorAll("[data-filtre-item]");
   itemsProjets.forEach((projet) => {
     const cat = projet.dataset.categorie;
     projet.classList.toggle("actif", categorie === "tous" || categorie === cat);
@@ -410,7 +410,7 @@ const INFOS = {
   gmail: {
     icone: "./images/gmail.png",
     methode: "Gmail",
-    valeur: "johanesfalitiana@gmail.com",
+    valeur: "falitianajohanes@gmail.com",
     url: "mailto:falitianajohanes@gmail.com",
   },
   linkedin: {
@@ -528,12 +528,12 @@ try {
   if (localStorage.getItem("theme") === "clair") basculerTheme();
 } catch (_) {}
 
-const NOM_FICHIER_CV = "RANAIVOJAONA Falitiana Johanes.pdf";
+const FICHIER_CV = "RANAIVOJAONA Falitiana Johanes.pdf";
 
 function telechargerCV() {
   const lien = document.createElement("a");
-  lien.href = NOM_FICHIER_CV;
-  lien.download = "CV_Johanes_Falitiana.pdf";
+  lien.href = encodeURI(FICHIER_CV);
+  lien.download = FICHIER_CV;
   document.body.appendChild(lien);
   lien.click();
   document.body.removeChild(lien);

@@ -1,6 +1,6 @@
-# 🍀 Johanès Falitiana
+# Johanès Falitiana
 
-## **Développeur Junior** • **Étudiant en Informatique**
+## Développeur Junior - Étudiant en Informatique
 
 **Portfolio :** [https://johanes-mg.github.io/](https://johanes-mg.github.io/)
 
@@ -10,15 +10,15 @@
 
 ---
 
-## 🍀 À propos de moi
+## À propos de moi
 
-Je suis RANAIVOJAONA Falitiana Johanès, un étudiant en 2ème année **d'Informatique Général** à **l'Ecole Nationale d'Informatique de Fianarantsoa**, passionné par le développement d'applications Web, Mobile et Desktop et l'exploration des pratiques de développement modernes.
+Je suis RANAIVOJAONA Falitiana Johanès, un étudiant en Deuxième année de Licence en Informatique Général à l'École Nationale d'Informatique de Fianarantsoa, passionné par le développement d'applications Web, Mobile et Desktop et l'exploration des pratiques de développement modernes.
 
-_"🎨Colorons le monde au-delà des lignes"_
+"Colorons le monde au-delà des lignes"
 
 ---
 
-## 🎖️ Compétences
+## Compétences
 
 | Catégorie       | Compétences                                           |
 | --------------- | ----------------------------------------------------- |
@@ -30,7 +30,7 @@ _"🎨Colorons le monde au-delà des lignes"_
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Langages**
 
@@ -58,15 +58,15 @@ _"🎨Colorons le monde au-delà des lignes"_
 
 ---
 
-## 📱 Projets réalisés
+## Projets réalisés
 
 | Projet           | Plateformes        | Technologies utilisées  |
 | ---------------- | ------------------ | ----------------------- |
 | **RAMP**         | Web                | HTML5, CSS3, JavaScript |
 | **Marv**         | Web                | HTML5, CSS3, JavaScript |
+| **Julieanna**    | Web                | HTML5, CSS3, JavaScript |
 | **JojohExpress** | Web                | HTML5, CSS3, JS, PHP    |
-| **Schoolar**     | Web                | React, PHP, Chart.js    |
-| **JojohExpress** | Web                | C#, .NET 8.0, Robocopy  |
+| **Schoolar**     | Web                | React, PHP, Vue.js      |
 | **CopyBoost**    | Desktop/Windows    | C#, .NET 8.0, Robocopy  |
 | **JBacc**        | Application mobile | Kotlin, Android         |
 | **JNotes**       | Application mobile | Kotlin, Android         |
@@ -74,43 +74,45 @@ _"🎨Colorons le monde au-delà des lignes"_
 
 ---
 
-## 📷 Captures d'écran
+## Captures d'écran
 
 ### Page d'accueil (Mode Clair & Sombre)
 
 <img src="captures/accueillight.png" width="600"/>
 <img src="captures/accueildark.png" width="600"/>
 
-### 🔖 Parcours
+### Parcours
 
 <img src="captures/parcours.png" width="600"/>
 
-### 🏷️ Projets
+### Projets
 
 <img src="captures/projets1.png" width="600"/>
 <img src="captures/projets2.png" width="600"/>
 
-### ♠️ Compétences
+### Compétences
 
 <img src="captures/skills1.png" width="600"/>
 <img src="captures/skills2.png" width="600"/>
 <img src="captures/skills3.png" width="600"/>
 
-### 📞 Page de contact
+### Page de contact
 
 <img src="captures/contact.png" width="600"/>
 
 ---
 
-## 📨 Contact
+## Contact
 
-- **WhatsApp** : [+261 38 75 879 59](https://wa.me/261387587959)
+- **WhatsApp** : [+261 33 54 297 82](https://wa.me/261335429782)
+- **Téléphone** : [+261 38 75 879 59](tel:+261387587959)
 - **Email** : falitianajohanes@gmail.com
+- **LinkedIn** : [Johanès Falitiana](https://www.linkedin.com/in/johan%C3%A8s-falitiana-335456431)
 - **Portfolio** : [https://johanes-mg.github.io](https://johanes-mg.github.io)
 
 ---
 
-## 📜 Licence
+## Licence
 
 Ce projet est open source et disponible sous licence MIT.
 

@@ -1,4 +1,5 @@
 code_source.txt
 *.txt
+!robots.txt
 .vscode/
 .vscode/**/*
