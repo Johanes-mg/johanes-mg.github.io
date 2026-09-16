@@ -107,12 +107,12 @@ const PROJETS_DATA = [
     prefixe: "julieanna",
     lien: "https://julieanna.vercel.app/",
   },
-    {
+  {
     id: "olympia",
     nom: "Olympia",
     categorie: "DESKTOP",
     description:
-      "Jeu de quiz Windows sur la mythologie grecque avec 60 questions, 3 niveaux de difficulté (Mortel, Demi-Dieu, Divin), 9 vies, musique de fond et animations fluides.",
+      "Jeu de quiz sur la mythologie grecque : 60 questions, 3 niveaux, 9 vies.",
     technologies: "C#, WPF, .NET 8.0, NAudio",
     vignette: "iconolympia.png",
     prefixe: "olympia",

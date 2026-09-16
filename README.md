@@ -60,18 +60,18 @@ Je suis RANAIVOJAONA Falitiana Johanès, un étudiant en Deuxième année de Lic
 
 ## Projets réalisés
 
-| Projet           | Plateformes        | Technologies utilisées   |
-| ---------------- | ------------------ | ------------------------ |
-| **RAMP**         | Web                | HTML5, CSS3, JavaScript  |
-| **Marv**         | Web                | HTML5, CSS3, JavaScript  |
-| **Julieanna**    | Web                | HTML5, CSS3, JavaScript  |
-| **JojohExpress** | Web                | HTML5, CSS3, JS, PHP     |
-| **Schoolar**     | Web                | React, PHP, Vue.js       |
-| **CopyBoost**    | Desktop/Windows    | C#, .NET 8.0, Robocopy   |
-| **Olympia**      | Desktop/Windows    | C#,.NET 8.0, WPF, NAudio |
-| **JBacc**        | Application mobile | Kotlin, Android          |
-| **JNotes**       | Application mobile | Kotlin, Android          |
-| **JHotel**       | Application mobile | Kotlin, Android          |
+| Projet           | Plateformes        | Technologies utilisées    |
+| ---------------- | ------------------ | ------------------------- |
+| **RAMP**         | Web                | HTML5, CSS3, JavaScript   |
+| **Marv**         | Web                | HTML5, CSS3, JavaScript   |
+| **Julieanna**    | Web                | HTML5, CSS3, JavaScript   |
+| **JojohExpress** | Web                | HTML5, CSS3, JS, PHP      |
+| **Schoolar**     | Web                | React, PHP, Vue.js        |
+| **CopyBoost**    | Desktop/Windows    | C#, .NET 8.0, Robocopy    |
+| **Olympia**      | Desktop/Windows    | C#, .NET 8.0, WPF, NAudio |
+| **JBacc**        | Application mobile | Kotlin, Android           |
+| **JNotes**       | Application mobile | Kotlin, Android           |
+| **JHotel**       | Application mobile | Kotlin, Android           |
 
 ---
 
