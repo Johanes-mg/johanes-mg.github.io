@@ -4,7 +4,7 @@
 
 **Web · Mobile · Desktop**
 
-### 🔗 Portfolio: [johanes-mg.github.io](https://johanes-mg.github.io)
+### Portfolio: [johanes-mg.github.io](https://johanes-mg.github.io)
 
 ![Profil views](https://komarev.com/ghpvc/?username=Johanes-mg&style=flat-square&color=6f42c1&label=Visiteurs)
 ![Followers](https://img.shields.io/github/followers/Johanes-mg?style=flat-square&color=6f42c1&label=Abonn%C3%A9s)
@@ -16,8 +16,6 @@
 ## À propos
 
 Étudiant en **2ᵉ année de Licence Informatique Générale** à l'École Nationale d'Informatique de Fianarantsoa, je conçois et développe des applications **Web**, **Mobile** et **Desktop** en explorant les pratiques modernes du développement logiciel.
-
-> Colorons le monde au-delà des lignes.
 
 ---
 
@@ -159,7 +157,7 @@
 
 ---
 
-_« Colorons le monde au-delà des lignes »_
+> 🎨Colorons le monde au-delà des lignes.
 
 <h3>Johanès Falitiana</h3>
 
