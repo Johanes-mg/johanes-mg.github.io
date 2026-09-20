@@ -4,13 +4,6 @@
 
 **Web · Mobile · Desktop**
 
-_« Colorons le monde au-delà des lignes »_
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-johanes--mg.github.io-6f42c1?style=for-the-badge&logo=githubpages&logoColor=white)](https://johanes-mg.github.io/)
-[![Email](https://img.shields.io/badge/Email-falitianajohanes@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:falitianajohanes@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Johan%C3%A8s_Falitiana-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/johan%C3%A8s-falitiana-335456431)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-+261_33_54_297_82-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/261335429782)
-
 ![Profil views](https://komarev.com/ghpvc/?username=Johanes-mg&style=flat-square&color=6f42c1&label=Visiteurs)
 ![Followers](https://img.shields.io/github/followers/Johanes-mg?style=flat-square&color=6f42c1&label=Abonn%C3%A9s)
 
@@ -60,37 +53,31 @@ _« Colorons le monde au-delà des lignes »_
 
 ## Projets
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
 ### 🌐 Web
 
-| Projet           | Stack                             |
-| ---------------- | --------------------------------- |
-| **RAMP**         | HTML5 · CSS3 · JavaScript         |
-| **Marv**         | HTML5 · CSS3 · JavaScript         |
-| **Julieanna**    | HTML5 · CSS3 · JavaScript         |
-| **JojohExpress** | HTML5 · CSS3 · JS · PHP           |
-| **Schoolar**     | React · PHP · Vue.js              |
-| **TradeVelvet**  | React · Node.js · Express · MySQL |
+| Projet                                                         | Stack                               |
+| :------------------------------------------------------------- | :---------------------------------- |
+| [**RAMP**](https://johanes-mg.github.io/Outils-Ramp/ramp.html) | `HTML5` `CSS3` `JavaScript`         |
+| [**Marv**](https://marvnathanael-4kgx.vercel.app/)             | `HTML5` `CSS3` `JavaScript`         |
+| [**Julieanna**](https://julieanna.vercel.app/)                 | `HTML5` `CSS3` `JavaScript`         |
+| [**JojohExpress**](https://github.com/Johanes-mg/JojohExpress) | `HTML5` `CSS3` `JavaScript` `PHP`   |
+| [**Schoolar**](https://github.com/Johanes-mg/Schoolar)         | `React` `PHP` `Vue.js`              |
+| [**TradeVelvet**](https://github.com/Johanes-mg/TradeVelvet)   | `React` `Node.js` `Express` `MySQL` |
 
-</td>
-<td width="50%" valign="top">
+### 💻 Desktop
 
-### 💻 Desktop & Mobile
+| Projet                                                   | Plateforme | Stack                        |
+| :------------------------------------------------------- | :--------: | :--------------------------- |
+| [**CopyBoost**](https://github.com/Johanes-mg/CopyBoost) |  Windows   | `C#` `.NET 8` `Robocopy`     |
+| [**Olympia**](https://github.com/Johanes-mg/Olympia)     |  Windows   | `C#` `.NET 8` `WPF` `NAudio` |
 
-| Projet        | Plateforme | Stack                      |
-| ------------- | ---------- | -------------------------- |
-| **CopyBoost** | Windows    | C# · .NET 8 · Robocopy     |
-| **Olympia**   | Windows    | C# · .NET 8 · WPF · NAudio |
-| **JBacc**     | Android    | Kotlin                     |
-| **JNotes**    | Android    | Kotlin                     |
-| **JHotel**    | Android    | Kotlin                     |
+### 📱 Mobile
 
-</td>
-</tr>
-</table>
+| Projet                                             | Plateforme | Stack    |
+| :------------------------------------------------- | :--------: | :------- |
+| [**JBacc**](https://github.com/Johanes-mg/JBacc)   |  Android   | `Kotlin` |
+| [**JNotes**](https://github.com/Johanes-mg/JNotes) |  Android   | `Kotlin` |
+| [**JHotel**](https://github.com/Johanes-mg/JHotel) |  Android   | `Kotlin` |
 
 ---
 
@@ -126,15 +113,25 @@ _« Colorons le monde au-delà des lignes »_
 
 ---
 
-## Me contacter
-
 <div align="center">
 
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-+261_33_54_297_82-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/261335429782)
-[![Téléphone](https://img.shields.io/badge/Téléphone-+261_38_75_879_59-0078D4?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+261387587959)
-[![Email](https://img.shields.io/badge/Email-falitianajohanes@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:falitianajohanes@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Johan%C3%A8s_Falitiana-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/johan%C3%A8s-falitiana-335456431)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visiter-6f42c1?style=for-the-badge&logo=githubpages&logoColor=white)](https://johanes-mg.github.io)
+## Me contacter
+
+<a href="https://wa.me/261335429782">
+  <img src="https://img.shields.io/badge/WhatsApp-+261_33_54_297_82-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp" />
+</a>
+<a href="tel:+261387587959">
+  <img src="https://img.shields.io/badge/Téléphone-+261_38_75_879_59-0078D4?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Téléphone" />
+</a>
+<a href="mailto:falitianajohanes@gmail.com">
+  <img src="https://img.shields.io/badge/Email-falitianajohanes@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+</a>
+<a href="https://www.linkedin.com/in/johan%C3%A8s-falitiana-335456431">
+  <img src="https://img.shields.io/badge/LinkedIn-Johan%C3%A8s_Falitiana-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+<a href="https://johanes-mg.github.io">
+  <img src="https://img.shields.io/badge/Portfolio-Visiter-6f42c1?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio" />
+</a>
 
 </div>
 
@@ -144,13 +141,28 @@ _« Colorons le monde au-delà des lignes »_
 
 ### Compétences linguistiques
 
-<img src="https://flagcdn.com/24x18/mg.png" width="24" height="18" alt="Madagascar" /> **Malagasy** · <img src="https://flagcdn.com/24x18/fr.png" width="24" height="18" alt="France" /> **Français** · <img src="https://flagcdn.com/24x18/gb.png" width="24" height="18" alt="Royaume-Uni" /> **Anglais**
+<table align="center">
+<tr>
+<td align="center">
+<img src="https://flagcdn.com/24x18/mg.png" width="24" height="18" alt="Madagascar" /><br/>
+<b>Malagasy</b>
+</td>
+<td align="center">
+<img src="https://flagcdn.com/24x18/fr.png" width="24" height="18" alt="France" /><br/>
+<b>Français</b>
+</td>
+<td align="center">
+<img src="https://flagcdn.com/24x18/gb.png" width="24" height="18" alt="Royaume-Uni" /><br/>
+<b>Anglais</b>
+</td>
+</tr>
+</table>
 
 ---
 
 _« Colorons le monde au-delà des lignes »_
 
-© 2026 **Johanès Falitiana** — Sous licence MIT
+<h3>Johanès Falitiana</h3>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%"/>
 
