@@ -42,6 +42,7 @@ const PROJETS_DATA = [
     prefixe: "schoolar",
     lien: "https://github.com/Johanes-mg/Schoolar",
   },
+
   {
     id: "copyboost",
     nom: "CopyBoost",
@@ -117,6 +118,17 @@ const PROJETS_DATA = [
     vignette: "iconolympia.png",
     prefixe: "olympia",
     lien: "https://github.com/Johanes-mg/Olympia",
+  },
+  {
+    id: "tradevelvet",
+    nom: "TradeVelvet",
+    categorie: "WEB",
+    description:
+      "Le marketplace où chaque compte devient une boutique. Publie, vends, suis tes vendeurs préférés.",
+    technologies: "React, Node.js, Express, MySQL",
+    vignette: "icontradevelvet.png",
+    prefixe: "tradevelvet",
+    lien: "https://github.com/Johanes-mg/TradeVelvet",
   },
 ];
 
