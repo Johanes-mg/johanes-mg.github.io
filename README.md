@@ -85,29 +85,41 @@
 
 <div align="center">
 
-### Accueil — Mode clair et sombre
+### Accueil — Mode clair
 
-<img src="captures/accueillight.png" width="45%" />
-<img src="captures/accueildark.png" width="45%" />
+<img src="https://johanes-mg.github.io/captures/accueillight.png" width="70%" />
+
+### Accueil — Mode sombre
+
+<img src="https://johanes-mg.github.io/captures/accueildark.png" width="70%" />
 
 ### Parcours
 
-<img src="captures/parcours.png" width="80%" />
+<img src="https://johanes-mg.github.io/captures/parcours.png" width="70%" />
 
-### Projets
+### Projets 1
 
-<img src="captures/projets1.png" width="45%" />
-<img src="captures/projets2.png" width="45%" />
+<img src="https://johanes-mg.github.io/captures/projets1.png" width="70%" />
 
-### Compétences
+### Projets 2
 
-<img src="captures/skills1.png" width="30%" />
-<img src="captures/skills2.png" width="30%" />
-<img src="captures/skills3.png" width="30%" />
+<img src="https://johanes-mg.github.io/captures/projets2.png" width="70%" />
+
+### Compétences 1
+
+<img src="https://johanes-mg.github.io/captures/skills1.png" width="70%" />
+
+### Compétences 2
+
+<img src="https://johanes-mg.github.io/captures/skills2.png" width="70%" />
+
+### Compétences 3
+
+<img src="https://johanes-mg.github.io/captures/skills3.png" width="70%" />
 
 ### Contact
 
-<img src="captures/contact.png" width="80%" />
+<img src="https://johanes-mg.github.io/captures/contact.png" width="70%" />
 
 </div>
 
@@ -157,7 +169,7 @@
 
 ---
 
-> 🎨Colorons le monde au-delà des lignes.
+> 🎨 Colorons le monde au-delà des lignes.
 
 <h3>Johanès Falitiana</h3>
 
