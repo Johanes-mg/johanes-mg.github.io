@@ -4,6 +4,8 @@
 
 **Web · Mobile · Desktop**
 
+### 🔗 Portfolio: [johanes-mg.github.io](https://johanes-mg.github.io)
+
 ![Profil views](https://komarev.com/ghpvc/?username=Johanes-mg&style=flat-square&color=6f42c1&label=Visiteurs)
 ![Followers](https://img.shields.io/github/followers/Johanes-mg?style=flat-square&color=6f42c1&label=Abonn%C3%A9s)
 
@@ -128,9 +130,6 @@
 </a>
 <a href="https://www.linkedin.com/in/johan%C3%A8s-falitiana-335456431">
   <img src="https://img.shields.io/badge/LinkedIn-Johan%C3%A8s_Falitiana-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-</a>
-<a href="https://johanes-mg.github.io">
-  <img src="https://img.shields.io/badge/Portfolio-Visiter-6f42c1?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio" />
 </a>
 
 </div>
