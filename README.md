@@ -73,11 +73,12 @@
 
 ### 📱 Mobile
 
-| Projet                                             | Plateforme | Stack    |
-| :------------------------------------------------- | :--------: | :------- |
-| [**JBacc**](https://github.com/Johanes-mg/JBacc)   |  Android   | `Kotlin` |
-| [**JNotes**](https://github.com/Johanes-mg/JNotes) |  Android   | `Kotlin` |
-| [**JHotel**](https://github.com/Johanes-mg/JHotel) |  Android   | `Kotlin` |
+| Projet                                                       | Plateforme | Stack    |
+| :----------------------------------------------------------- | :--------: | :------- |
+| [**JBacc**](https://github.com/Johanes-mg/JBacc)             |  Android   | `Kotlin` |
+| [**JNotes**](https://github.com/Johanes-mg/JNotes)           |  Android   | `Kotlin` |
+| [**JHotel**](https://github.com/Johanes-mg/JHotel)           |  Android   | `Kotlin` |
+| [**MangaChrono**](https://github.com/Johanes-mg/MangaChrono) |  Android   | `Kotlin` |
 
 ---
 

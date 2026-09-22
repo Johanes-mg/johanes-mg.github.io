@@ -130,6 +130,17 @@ const PROJETS_DATA = [
     prefixe: "tradevelvet",
     lien: "https://github.com/Johanes-mg/TradeVelvet",
   },
+  {
+    id: "mangachrono",
+    nom: "Manga Chrono",
+    categorie: "MOBILE",
+    description:
+      "Quiz sur la culture manga et anime : 100 niveaux à débloquer, 100 questions, top chrono",
+    technologies: "Kotlin, Android",
+    vignette: "iconmangachrono.png",
+    prefixe: "mangachrono",
+    lien: "https://github.com/Johanes-mg/MangaChrono",
+  },
 ];
 
 const listeProjets = document.getElementById("liste-projets");
