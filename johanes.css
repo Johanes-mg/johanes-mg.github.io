@@ -716,7 +716,7 @@ main {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 16px;
+  border-radius: 0;
   overflow: hidden;
   margin-bottom: 15px;
   background: #1a1a1a;
@@ -1241,7 +1241,9 @@ body.theme-clair .titre-projet {
 body.theme-clair .categorie-projet {
   color: rgba(26, 26, 46, 0.75);
 }
-
+body.theme-clair .description-projet {
+  color: #000;
+}
 body.theme-clair .btn-theme {
   background: #e8edf8;
   border-color: #d0d8e8;
@@ -1652,9 +1654,7 @@ body.theme-clair .item-ligne-temps:first-child::before {
     width: 8px;
     left: -43px;
   }
-  .image-projet {
-    border-radius: 16px;
-  }
+
   .info-projet {
     padding: 15px 15px 12px 15px;
   }
