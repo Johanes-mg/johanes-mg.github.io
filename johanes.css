@@ -694,13 +694,24 @@ main {
 }
 
 .item-projet.actif {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #2a2a2a;
+  border-radius: 18px;
+  overflow: hidden;
 }
-
 .item-projet > a {
   width: 100%;
 }
-
+.description-projet {
+  color: #ccc;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 10px 10px 0 10px;
+  flex: 1;
+}
 .image-projet {
   position: relative;
   width: 100%;
@@ -760,10 +771,9 @@ main {
 .info-projet {
   padding: 12px 10px 10px 10px;
   border-top: 1px solid #2a2a2a;
-  margin-top: 10px;
+  margin-top: auto;
   text-align: center;
 }
-
 .lien-projet {
   display: inline-block;
   color: #a78bfa;
@@ -844,7 +854,7 @@ main {
 
 .switch-curseur.position-gauche {
   left: 4px;
-  background: #ea4335;
+  background: #e39292;
 }
 
 .switch-curseur.position-centre {
@@ -900,11 +910,11 @@ main {
 }
 
 .btn-contact.methode-gmail {
-  background: #ea4335;
+  background: #e39292;
 }
 
 .btn-contact.methode-gmail:hover {
-  background: #d33426;
+  background: #d17a7a;
 }
 
 .contact-info-badge {

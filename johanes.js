@@ -113,7 +113,7 @@ const PROJETS_DATA = [
     nom: "Olympia",
     categorie: "DESKTOP",
     description:
-      "Jeu de quiz sur la mythologie grecque : 360 questions réparties en 3 difficultés, 4 chapitres et 2 niveaux par chapitre, avec musique et animations.",
+      "Quiz immersif sur la mythologie grecque : 360 questions, 3 niveaux de difficulté et 4 chapitres à conquérir.",
     technologies: "C#, WPF, .NET 8.0, NAudio",
     vignette: "iconolympia.png",
     prefixe: "olympia",
