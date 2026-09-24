@@ -141,6 +141,17 @@ const PROJETS_DATA = [
     prefixe: "mangachrono",
     lien: "https://github.com/Johanes-mg/MangaChrono",
   },
+  {
+    id: "edt",
+    nom: "EDT",
+    categorie: "WEB",
+    description:
+      "Éditeur visuel d'emploi du temps scolaire. Créez votre semaine, colorez chaque matière.",
+    technologies: "HTML5, CSS3, JavaScript",
+    vignette: "iconedt.png",
+    prefixe: "edt",
+    lien: "https://johanes-mg.github.io/EDT/",
+  },
 ];
 
 const listeProjets = document.getElementById("liste-projets");
