@@ -42,7 +42,6 @@ const PROJETS_DATA = [
     prefixe: "schoolar",
     lien: "https://github.com/Johanes-mg/Schoolar",
   },
-
   {
     id: "copyboost",
     nom: "CopyBoost",
@@ -162,9 +161,9 @@ function genererProjetHTML(projet) {
       <a href="#" onclick="ouvrirLightboxProjet('${projet.id}'); return false;" aria-label="Voir le projet ${projet.nom}">
         <figure class="image-projet">
           <div class="icone-oeil">
-            <img src="./images/search.png" width="32" height="32" alt="" loading="lazy" />
+            <img src="./images/search.png" alt="search" width="32" height="32" loading="lazy" />
           </div>
-          <img src="./images/projet/${projet.vignette}" loading="lazy" width="640" height="360" alt="" />
+          <img src="./images/projet/${projet.vignette}" alt="${projet.prefixe}" loading="lazy" width="640" height="360" />
         </figure>
         <h3 class="titre-projet">${projet.nom}</h3>
         <p class="categorie-projet">${projet.categorie} - ${projet.technologies}</p>
@@ -550,28 +549,39 @@ liensNavigation.forEach((lien) => {
   });
 });
 
+const themeToggle = document.getElementById("theme");
 let themeSombre = true;
 
-function basculerTheme() {
-  const body = document.body;
-  const themeIcon = document.getElementById("theme-icon");
-  if (themeSombre) {
-    body.classList.add("theme-clair");
-    if (themeIcon) themeIcon.src = "./images/icone-lune.png";
-    themeSombre = false;
-  } else {
-    body.classList.remove("theme-clair");
-    if (themeIcon) themeIcon.src = "./images/icone-soleil.png";
-    themeSombre = true;
+function appliquerTheme(sombre) {
+  themeSombre = sombre;
+
+  document.body.classList.toggle("theme-clair", !sombre);
+
+  if (themeToggle && themeToggle.checked !== sombre) {
+    themeToggle.checked = sombre;
   }
+
   try {
-    localStorage.setItem("theme", themeSombre ? "sombre" : "clair");
+    localStorage.setItem("theme", sombre ? "sombre" : "clair");
   } catch (_) {}
 }
 
+if (themeToggle) {
+  themeToggle.addEventListener("change", () => {
+    appliquerTheme(themeToggle.checked);
+  });
+}
+
 try {
-  if (localStorage.getItem("theme") === "clair") basculerTheme();
-} catch (_) {}
+  const themeSauvegarde = localStorage.getItem("theme");
+  if (themeSauvegarde === "clair") {
+    appliquerTheme(false);
+  } else {
+    appliquerTheme(true);
+  }
+} catch (_) {
+  appliquerTheme(true);
+}
 
 const FICHIER_CV = "RANAIVOJAONA Falitiana Johanes.pdf";
 
