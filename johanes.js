@@ -94,7 +94,7 @@ const PROJETS_DATA = [
     technologies: "HTML5, CSS3, JavaScript",
     vignette: "iconmarv.png",
     prefixe: "marv",
-    lien: "https://marvnathanael-4kgx.vercel.app/",
+    lien: "https://marvnathanael-4kgx.vercel.app",
   },
   {
     id: "julieanna",
@@ -149,7 +149,18 @@ const PROJETS_DATA = [
     technologies: "HTML5, CSS3, JavaScript",
     vignette: "iconedt.png",
     prefixe: "edt",
-    lien: "https://johanes-mg.github.io/EDT/",
+    lien: "https://johanes-mg.github.io/EDT",
+  },
+  {
+    id: "pointage",
+    nom: "Pointage",
+    categorie: "DESKTOP",
+    description:
+      "Application Desktop pour gérer la présence de votre personnel, sans complication.",
+    technologies: "C#,SQLite",
+    vignette: "iconpointage.png",
+    prefixe: "pointage",
+    lien: "https://github.com/Johanes-mg/Pointage",
   },
 ];
 
