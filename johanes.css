@@ -115,6 +115,11 @@ main {
   display: block;
 }
 
+.page:not(.actif) {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 1000px;
+}
+
 .info-principale {
   position: relative;
   display: flex;
@@ -1076,10 +1081,16 @@ main {
   right: -70px;
 }
 
+html.theme-clair-preload body {
+  background: #ffffff;
+  color: #1a1a2e;
+}
+
 body.theme-clair {
   background: #ffffff;
   color: #1a1a2e;
 }
+
 .theme {
   display: flex;
   align-items: center;
@@ -1591,6 +1602,17 @@ body.theme-clair .btn-nav-lightbox:hover {
 
 body.theme-clair .item-ligne-temps:first-child::before {
   background: #d0d8e8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @media (max-width: 480px) {

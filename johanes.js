@@ -165,6 +165,7 @@ const PROJETS_DATA = [
 ];
 
 const listeProjets = document.getElementById("liste-projets");
+let projetsGeneres = false;
 
 function genererProjetHTML(projet) {
   return `
@@ -172,9 +173,9 @@ function genererProjetHTML(projet) {
       <a href="#" onclick="ouvrirLightboxProjet('${projet.id}'); return false;" aria-label="Voir le projet ${projet.nom}">
         <figure class="image-projet">
           <div class="icone-oeil">
-            <img src="./images/search.png" alt="search" width="32" height="32" loading="lazy" />
+            <img src="./images/search.png" alt="" width="32" height="32" loading="lazy" decoding="async" />
           </div>
-          <img src="./images/projet/${projet.vignette}" alt="${projet.prefixe}" loading="lazy" width="640" height="360" />
+          <img src="./images/projet/${projet.vignette}" alt="${projet.nom}" loading="lazy" decoding="async" width="640" height="360" />
         </figure>
         <h3 class="titre-projet">${projet.nom}</h3>
         <p class="categorie-projet">${projet.categorie} - ${projet.technologies}</p>
@@ -189,9 +190,11 @@ function genererProjetHTML(projet) {
   `;
 }
 
-PROJETS_DATA.forEach((projet) => {
-  listeProjets.innerHTML += genererProjetHTML(projet);
-});
+function genererProjetsSiBesoin() {
+  if (projetsGeneres || !listeProjets) return;
+  projetsGeneres = true;
+  listeProjets.innerHTML = PROJETS_DATA.map(genererProjetHTML).join("");
+}
 
 let lightboxImages = [];
 let lightboxIndex = 0;
@@ -416,6 +419,7 @@ const filtrerProjets = (categorie) => {
 
 itemsSelect.forEach((item) => {
   item.addEventListener("click", function () {
+    genererProjetsSiBesoin();
     const categorie = this.dataset.categorie || this.textContent.toLowerCase();
     valeurSelect.textContent = this.textContent;
     basculerClasse(selectFiltre);
@@ -437,6 +441,7 @@ itemsSelect.forEach((item) => {
 let dernierBoutonClique = boutonsFiltre[0];
 boutonsFiltre.forEach((btn) => {
   btn.addEventListener("click", function () {
+    genererProjetsSiBesoin();
     const categorie = this.dataset.categorie || this.textContent.toLowerCase();
     valeurSelect.textContent = this.textContent;
     filtrerProjets(categorie);
@@ -539,6 +544,8 @@ liensNavigation.forEach((lien) => {
   lien.addEventListener("click", function () {
     const nomPage = this.textContent.toLowerCase().trim();
 
+    if (nomPage === "projets") genererProjetsSiBesoin();
+
     pages.forEach((page) => {
       const nomPageActuelle = page.dataset.page.toLowerCase().trim();
       page.classList.toggle("actif", nomPage === nomPageActuelle);
@@ -593,6 +600,8 @@ try {
 } catch (_) {
   appliquerTheme(true);
 }
+
+document.documentElement.classList.remove("theme-clair-preload");
 
 const FICHIER_CV = "RANAIVOJAONA Falitiana Johanes.pdf";
 
