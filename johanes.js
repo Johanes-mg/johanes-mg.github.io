@@ -152,15 +152,26 @@ const PROJETS_DATA = [
     lien: "https://johanes-mg.github.io/EDT",
   },
   {
-    id: "pointage",
-    nom: "Pointage",
+    id: "pointage_sharp",
+    nom: "Pointage_sharp",
     categorie: "DESKTOP",
     description:
       "Application Desktop pour gérer la présence de votre personnel, sans complication.",
     technologies: "C#,SQLite",
-    vignette: "iconpointage.png",
-    prefixe: "pointage",
-    lien: "https://github.com/Johanes-mg/Pointage",
+    vignette: "iconpointagesharp.png",
+    prefixe: "pointagesharp",
+    lien: "https://github.com/Johanes-mg/Pointage_sharp",
+  },
+    {
+    id: "pointage_rust",
+    nom: "Pointage_rust",
+    categorie: "DESKTOP",
+    description:
+      "Application Desktop pour gérer la présence de votre personnel, sans complication refaite en pure Rust.",
+    technologies: "Rust,SQLite",
+    vignette: "iconpointagerust.png",
+    prefixe: "pointagerust",
+    lien: "https://github.com/Johanes-mg/Pointage_rust",
   },
 ];
 
