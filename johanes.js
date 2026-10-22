@@ -173,6 +173,17 @@ const PROJETS_DATA = [
     prefixe: "pointagerust",
     lien: "https://github.com/Johanes-mg/Pointage_rust",
   },
+    {
+    id: "lechapes",
+    nom: "Lechapes",
+    categorie: "DESKTOP",
+    description:
+      "Un éditeur de texte léger,rapide et conviviale",
+	technologies: "Rust",
+    vignette: "iconlechapes.png",
+    prefixe: "lechapes",
+    lien: "https://github.com/Johanes-mg/Lechapes",
+  },
 ];
 
 const listeProjets = document.getElementById("liste-projets");
