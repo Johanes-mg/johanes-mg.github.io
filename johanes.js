@@ -16,7 +16,7 @@ const PROJETS_DATA = [
     description:
       "Outil web pour générer des numéros au hasard au format Malagasy, copier des caractères UTF-8 et sélecteur de couleur.",
     technologies: "HTML5, CSS3, JavaScript",
-    vignette: "iconramp.png",
+    vignette: "iconramp",
     prefixe: "ramp",
     lien: "https://johanes-mg.github.io/Outils-Ramp/ramp.html",
   },
@@ -27,7 +27,7 @@ const PROJETS_DATA = [
     description:
       "Site web de réservation et de gestion de colis, d'ajouter, modifier ou effacer des conducteurs et les véhicules de transport.",
     technologies: "HTML5, CSS3, JavaScript, PHP",
-    vignette: "iconjojohexpress.png",
+    vignette: "iconjojohexpress",
     prefixe: "jojohexpress",
     lien: "https://github.com/Johanes-mg/JojohExpress",
   },
@@ -38,7 +38,7 @@ const PROJETS_DATA = [
     description:
       "Plateforme web qui permet de faire la gestion des enseignants d'un établissement scolaire avec graphiques interactifs.",
     technologies: "React, PHP, Vue.js",
-    vignette: "iconschoolar.png",
+    vignette: "iconschoolar",
     prefixe: "schoolar",
     lien: "https://github.com/Johanes-mg/Schoolar",
   },
@@ -49,7 +49,7 @@ const PROJETS_DATA = [
     description:
       "Utilitaire de copie rapide des fichiers basé sur le programme Robocopy.",
     technologies: "C#, .NET 8.0, Robocopy",
-    vignette: "iconcopyboost.png",
+    vignette: "iconcopyboost",
     prefixe: "copyboostcsharp",
     lien: "https://github.com/Johanes-mg/CopyBoost",
   },
@@ -60,7 +60,7 @@ const PROJETS_DATA = [
     description:
       "Application mobile d'aide à la préparation du baccalauréat avec sujets et exercices intégrés.",
     technologies: "Kotlin, Android",
-    vignette: "iconjbacc.png",
+    vignette: "iconjbacc",
     prefixe: "jbacckotlin",
     lien: "https://github.com/Johanes-mg/JBacc",
   },
@@ -70,7 +70,7 @@ const PROJETS_DATA = [
     categorie: "MOBILE",
     description: "Application de calcul de notes avec leurs catégories.",
     technologies: "Kotlin, Android",
-    vignette: "iconjnotes.png",
+    vignette: "iconjnotes",
     prefixe: "jnoteskotlin",
     lien: "https://github.com/Johanes-mg/JNotes",
   },
@@ -81,7 +81,7 @@ const PROJETS_DATA = [
     description:
       "Application de gestion hôtelière : réservation des chambres, gestion des clients et facturation.",
     technologies: "Kotlin, Android",
-    vignette: "iconjhotel.png",
+    vignette: "iconjhotel",
     prefixe: "jhotelkotlin",
     lien: "https://github.com/Johanes-mg/JHotel",
   },
@@ -92,7 +92,7 @@ const PROJETS_DATA = [
     description:
       "Site vitrine pour un jeune producteur musical. Présentation de l'artiste, de ses services et de son univers musical.",
     technologies: "HTML5, CSS3, JavaScript",
-    vignette: "iconmarv.png",
+    vignette: "iconmarv",
     prefixe: "marv",
     lien: "https://marvnathanael-4kgx.vercel.app",
   },
@@ -103,7 +103,7 @@ const PROJETS_DATA = [
     description:
       "Site vitrine présentant le parcours, les formations et les compétences d'une consultante en administration des affaires.",
     technologies: "HTML5, CSS3, JavaScript",
-    vignette: "iconjulieanna.png",
+    vignette: "iconjulieanna",
     prefixe: "julieanna",
     lien: "https://julieanna.vercel.app/",
   },
@@ -114,7 +114,7 @@ const PROJETS_DATA = [
     description:
       "Quiz immersif sur la mythologie grecque : 360 questions, 3 niveaux de difficulté et 4 chapitres à conquérir.",
     technologies: "C#, WPF, .NET 8.0, NAudio",
-    vignette: "iconolympia.png",
+    vignette: "iconolympia",
     prefixe: "olympia",
     lien: "https://github.com/Johanes-mg/Olympia",
   },
@@ -125,7 +125,7 @@ const PROJETS_DATA = [
     description:
       "Le marketplace où chaque compte devient une boutique. Publie, vends, suis tes vendeurs préférés.",
     technologies: "React, Node.js, Express, MySQL",
-    vignette: "icontradevelvet.png",
+    vignette: "icontradevelvet",
     prefixe: "tradevelvet",
     lien: "https://github.com/Johanes-mg/TradeVelvet",
   },
@@ -136,7 +136,7 @@ const PROJETS_DATA = [
     description:
       "Quiz sur la culture manga et anime : 100 niveaux à débloquer, 100 questions, top chrono",
     technologies: "Kotlin, Android",
-    vignette: "iconmangachrono.png",
+    vignette: "iconmangachrono",
     prefixe: "mangachrono",
     lien: "https://github.com/Johanes-mg/MangaChrono",
   },
@@ -147,7 +147,7 @@ const PROJETS_DATA = [
     description:
       "Éditeur visuel d'emploi du temps scolaire. Créez votre semaine, colorez chaque matière.",
     technologies: "HTML5, CSS3, JavaScript",
-    vignette: "iconedt.png",
+    vignette: "iconedt",
     prefixe: "edt",
     lien: "https://johanes-mg.github.io/EDT",
   },
@@ -158,29 +158,28 @@ const PROJETS_DATA = [
     description:
       "Application Desktop pour gérer la présence de votre personnel, sans complication.",
     technologies: "C#,SQLite",
-    vignette: "iconpointagesharp.png",
+    vignette: "iconpointagesharp",
     prefixe: "pointagesharp",
     lien: "https://github.com/Johanes-mg/Pointage_sharp",
   },
-    {
+  {
     id: "pointage_rust",
     nom: "Pointage_rust",
     categorie: "DESKTOP",
     description:
       "Application Desktop pour gérer la présence de votre personnel, sans complication refaite en pure Rust.",
     technologies: "Rust,SQLite",
-    vignette: "iconpointagerust.png",
+    vignette: "iconpointagerust",
     prefixe: "pointagerust",
     lien: "https://github.com/Johanes-mg/Pointage_rust",
   },
-    {
+  {
     id: "lechapes",
     nom: "Lechapes",
     categorie: "DESKTOP",
-    description:
-      "Un éditeur de texte léger,rapide et conviviale",
-	technologies: "Rust",
-    vignette: "iconlechapes.png",
+    description: "Un éditeur de texte léger,rapide et conviviale",
+    technologies: "Rust",
+    vignette: "iconlechapes",
     prefixe: "lechapes",
     lien: "https://github.com/Johanes-mg/Lechapes",
   },
@@ -188,18 +187,42 @@ const PROJETS_DATA = [
     id: "joinus",
     nom: "Joinus",
     categorie: "DESKTOP",
-    description:
-      "Messagerie locale en LAN",
-	technologies: "Rust",
-    vignette: "iconjoinus.png",
+    description: "Messagerie locale en LAN",
+    technologies: "Rust",
+    vignette: "iconjoinus",
     prefixe: "joinus",
     lien: "https://github.com/Johanes-mg/Joinus",
   },
-  
 ];
+
+const IMAGES_MAP = new Map();
 
 const listeProjets = document.getElementById("liste-projets");
 let projetsGeneres = false;
+
+function nomFichierSansExt(nom) {
+  return nom.replace(/\.[^.]+$/, "");
+}
+
+function construireMapImages() {
+  return fetch("./images/projet/index.json")
+    .then((r) => (r.ok ? r.json() : []))
+    .then((liste) => {
+      IMAGES_MAP.clear();
+      liste.forEach((nom) => {
+        IMAGES_MAP.set(nomFichierSansExt(nom), nom);
+      });
+    })
+    .catch(() => {
+      IMAGES_MAP.clear();
+    });
+}
+
+function urlImage(base) {
+  const fichier = IMAGES_MAP.get(base);
+  if (fichier) return `./images/projet/${fichier}`;
+  return `./images/projet/${base}.jpg`;
+}
 
 function genererProjetHTML(projet) {
   return `
@@ -209,7 +232,7 @@ function genererProjetHTML(projet) {
           <div class="icone-oeil">
             <img src="./images/search.png" alt="" width="32" height="32" loading="lazy" decoding="async" />
           </div>
-          <img src="./images/projet/${projet.vignette}" alt="${projet.nom}" loading="lazy" decoding="async" width="640" height="360" />
+          <img src="${urlImage(projet.vignette)}" alt="${projet.nom}" loading="lazy" decoding="async" width="640" height="360" />
         </figure>
         <h3 class="titre-projet">${projet.nom}</h3>
         <p class="categorie-projet">${projet.categorie} - ${projet.technologies}</p>
@@ -227,7 +250,9 @@ function genererProjetHTML(projet) {
 function genererProjetsSiBesoin() {
   if (projetsGeneres || !listeProjets) return;
   projetsGeneres = true;
-  listeProjets.innerHTML = PROJETS_DATA.map(genererProjetHTML).join("");
+  construireMapImages().then(() => {
+    listeProjets.innerHTML = PROJETS_DATA.map(genererProjetHTML).join("");
+  });
 }
 
 let lightboxImages = [];
@@ -240,47 +265,40 @@ const lightboxTitre = document.getElementById("lightbox-titre");
 const lightboxCounter = document.getElementById("lightbox-counter");
 const navButtons = document.querySelectorAll(".btn-nav-lightbox");
 
-function ouvrirLightboxProjet(projectId) {
+async function ouvrirLightboxProjet(projectId) {
   const projet = PROJETS_DATA.find((p) => p.id === projectId);
   if (!projet) return;
 
+  await construireMapImages();
+
   isLightboxProjet = true;
   const images = [];
-  let i = 1;
 
-  function verifierImageSuivante() {
-    const imgPath = `./images/projet/${projet.prefixe}_${i}.png`;
-    const img = new Image();
-    img.onload = () => {
-      images.push(imgPath);
-      i++;
-      verifierImageSuivante();
-    };
-    img.onerror = () => terminerDetection();
-    img.src = imgPath;
+  for (let i = 1; i <= 50; i++) {
+    const fichier = IMAGES_MAP.get(`${projet.prefixe}_${i}`);
+    if (!fichier) break;
+    images.push(`./images/projet/${fichier}`);
   }
 
-  function terminerDetection() {
-    lightboxImages = images;
-    lightboxIndex = 0;
+  lightboxImages = images;
+  lightboxIndex = 0;
 
-    navButtons.forEach((btn) => (btn.style.display = "flex"));
+  navButtons.forEach(
+    (btn) => (btn.style.display = images.length > 1 ? "flex" : "none"),
+  );
 
-    if (images.length === 0) {
-      lightboxImage.src = `./images/projet/${projet.vignette}`;
-      lightboxTitre.textContent = projet.nom;
-      lightboxCounter.textContent = "1 / 1";
-    } else {
-      lightboxImage.src = images[0];
-      lightboxTitre.textContent = projet.nom;
-      lightboxCounter.textContent = `1 / ${images.length}`;
-    }
-
-    lightboxOverlay.classList.add("actif");
-    document.body.style.overflow = "hidden";
+  if (images.length === 0) {
+    lightboxImage.src = urlImage(projet.vignette);
+    lightboxTitre.textContent = projet.nom;
+    lightboxCounter.textContent = "1 / 1";
+  } else {
+    lightboxImage.src = images[0];
+    lightboxTitre.textContent = projet.nom;
+    lightboxCounter.textContent = `1 / ${images.length}`;
   }
 
-  verifierImageSuivante();
+  lightboxOverlay.classList.add("actif");
+  document.body.style.overflow = "hidden";
 }
 
 function fermerLightbox() {
