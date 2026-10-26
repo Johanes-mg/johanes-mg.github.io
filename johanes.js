@@ -184,6 +184,18 @@ const PROJETS_DATA = [
     prefixe: "lechapes",
     lien: "https://github.com/Johanes-mg/Lechapes",
   },
+  {
+    id: "joinus",
+    nom: "Joinus",
+    categorie: "DESKTOP",
+    description:
+      "Messagerie locale en LAN",
+	technologies: "Rust",
+    vignette: "iconjoinus.png",
+    prefixe: "joinus",
+    lien: "https://github.com/Johanes-mg/Joinus",
+  },
+  
 ];
 
 const listeProjets = document.getElementById("liste-projets");
