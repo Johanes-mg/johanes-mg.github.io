@@ -193,6 +193,17 @@ const PROJETS_DATA = [
     prefixe: "joinus",
     lien: "https://github.com/Johanes-mg/Joinus",
   },
+{
+    id: "eden",
+    nom: "Eden",
+    categorie: "WEB",
+    description:
+      "Sélection exigeante de logiciels libres, gratuits ou payants, choisis pour leur sobriété et leur absence de suivi",
+    technologies: "HTML5, CSS3, JavaScript",
+    vignette: "iconeden",
+    prefixe: "eden",
+    lien: "https://johanes-mg.github.io/Eden",
+  },
 ];
 
 const IMAGES_MAP = new Map();
