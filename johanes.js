@@ -13,10 +13,13 @@ const PROJETS_DATA = [
     id: "ramp",
     nom: "RAMP",
     categorie: "WEB",
-    description:
-      "Outil web pour générer des numéros au hasard au format Malagasy, copier des caractères UTF-8 et sélecteur de couleur.",
+    description: {
+      fr: "Outil web pour générer des numéros au hasard au format Malagasy, copier des caractères UTF-8 et sélecteur de couleur.",
+      en: "Web tool to generate random numbers in Malagasy format, copy UTF-8 characters and a color picker.",
+    },
     technologies: "HTML5, CSS3, JavaScript",
     vignette: "iconramp",
+    vignetteExt: "png",
     prefixe: "ramp",
     lien: "https://johanes-mg.github.io/Outils-Ramp/ramp.html",
   },
@@ -24,10 +27,13 @@ const PROJETS_DATA = [
     id: "jojohexpress",
     nom: "JojohExpress",
     categorie: "WEB",
-    description:
-      "Site web de réservation et de gestion de colis, d'ajouter, modifier ou effacer des conducteurs et les véhicules de transport.",
+    description: {
+      fr: "Site web de réservation et de gestion de colis, d'ajouter, modifier ou effacer des conducteurs et les véhicules de transport.",
+      en: "Website for booking and managing parcels, adding, editing or deleting drivers and transport vehicles.",
+    },
     technologies: "HTML5, CSS3, JavaScript, PHP",
     vignette: "iconjojohexpress",
+    vignetteExt: "png",
     prefixe: "jojohexpress",
     lien: "https://github.com/Johanes-mg/JojohExpress",
   },
@@ -35,10 +41,13 @@ const PROJETS_DATA = [
     id: "schoolar",
     nom: "Schoolar",
     categorie: "WEB",
-    description:
-      "Plateforme web qui permet de faire la gestion des enseignants d'un établissement scolaire avec graphiques interactifs.",
+    description: {
+      fr: "Plateforme web qui permet de faire la gestion des enseignants d'un établissement scolaire avec graphiques interactifs.",
+      en: "Web platform to manage teachers of a school with interactive charts.",
+    },
     technologies: "React, PHP, Vue.js",
     vignette: "iconschoolar",
+    vignetteExt: "jpg",
     prefixe: "schoolar",
     lien: "https://github.com/Johanes-mg/Schoolar",
   },
@@ -46,10 +55,13 @@ const PROJETS_DATA = [
     id: "copyboost",
     nom: "CopyBoost",
     categorie: "DESKTOP",
-    description:
-      "Utilitaire de copie rapide des fichiers basé sur le programme Robocopy.",
+    description: {
+      fr: "Utilitaire de copie rapide des fichiers basé sur le programme Robocopy.",
+      en: "Fast file copy utility based on the Robocopy program.",
+    },
     technologies: "C#, .NET 8.0, Robocopy",
     vignette: "iconcopyboost",
+    vignetteExt: "jpg",
     prefixe: "copyboostcsharp",
     lien: "https://github.com/Johanes-mg/CopyBoost",
   },
@@ -57,10 +69,14 @@ const PROJETS_DATA = [
     id: "jbacc",
     nom: "JBacc",
     categorie: "MOBILE",
-    description:
-      "Application mobile d'aide à la préparation du baccalauréat avec sujets et exercices intégrés.",
+    description: {
+      fr: "Application mobile d'aide à la préparation du baccalauréat avec sujets et exercices intégrés.",
+      en: "Mobile app to help prepare for the baccalaureate with integrated past papers and exercises.",
+    },
     technologies: "Kotlin, Android",
     vignette: "iconjbacc",
+    vignetteEn: "iconjbacc-en.jpg",
+    vignetteFr: "iconjbacc-fr.png",
     prefixe: "jbacckotlin",
     lien: "https://github.com/Johanes-mg/JBacc",
   },
@@ -68,9 +84,14 @@ const PROJETS_DATA = [
     id: "jnotes",
     nom: "JNotes",
     categorie: "MOBILE",
-    description: "Application de calcul de notes avec leurs catégories.",
+    description: {
+      fr: "Application de calcul de notes avec leurs catégories.",
+      en: "Grade calculation app with categories.",
+    },
     technologies: "Kotlin, Android",
     vignette: "iconjnotes",
+    vignetteEn: "iconjnotes-en.jpg",
+    vignetteFr: "iconjnotes-fr.png",
     prefixe: "jnoteskotlin",
     lien: "https://github.com/Johanes-mg/JNotes",
   },
@@ -78,10 +99,13 @@ const PROJETS_DATA = [
     id: "jhotel",
     nom: "JHotel",
     categorie: "MOBILE",
-    description:
-      "Application de gestion hôtelière : réservation des chambres, gestion des clients et facturation.",
+    description: {
+      fr: "Application de gestion hôtelière : réservation des chambres, gestion des clients et facturation.",
+      en: "Hotel management app: room booking, client management and billing.",
+    },
     technologies: "Kotlin, Android",
     vignette: "iconjhotel",
+    vignetteExt: "png",
     prefixe: "jhotelkotlin",
     lien: "https://github.com/Johanes-mg/JHotel",
   },
@@ -89,10 +113,13 @@ const PROJETS_DATA = [
     id: "marv",
     nom: "Marv",
     categorie: "WEB",
-    description:
-      "Site vitrine pour un jeune producteur musical. Présentation de l'artiste, de ses services et de son univers musical.",
+    description: {
+      fr: "Site vitrine pour un jeune producteur musical. Présentation de l'artiste, de ses services et de son univers musical.",
+      en: "Showcase website for a young music producer. Presentation of the artist, his services and his musical universe.",
+    },
     technologies: "HTML5, CSS3, JavaScript",
     vignette: "iconmarv",
+    vignetteExt: "jpg",
     prefixe: "marv",
     lien: "https://marvnathanael-4kgx.vercel.app",
   },
@@ -100,10 +127,13 @@ const PROJETS_DATA = [
     id: "julieanna",
     nom: "Julieanna",
     categorie: "WEB",
-    description:
-      "Site vitrine présentant le parcours, les formations et les compétences d'une consultante en administration des affaires.",
+    description: {
+      fr: "Site vitrine présentant le parcours, les formations et les compétences d'une consultante en administration des affaires.",
+      en: "Showcase website presenting the career, training and skills of a business administration consultant.",
+    },
     technologies: "HTML5, CSS3, JavaScript",
     vignette: "iconjulieanna",
+    vignetteExt: "jpg",
     prefixe: "julieanna",
     lien: "https://julieanna.vercel.app/",
   },
@@ -111,10 +141,13 @@ const PROJETS_DATA = [
     id: "olympia",
     nom: "Olympia",
     categorie: "DESKTOP",
-    description:
-      "Quiz immersif sur la mythologie grecque : 360 questions, 3 niveaux de difficulté et 4 chapitres à conquérir.",
+    description: {
+      fr: "Quiz immersif sur la mythologie grecque : 360 questions, 3 niveaux de difficulté et 4 chapitres à conquérir.",
+      en: "Immersive quiz about Greek mythology: 360 questions, 3 difficulty levels and 4 chapters to conquer.",
+    },
     technologies: "C#, WPF, .NET 8.0, NAudio",
     vignette: "iconolympia",
+    vignetteExt: "jpg",
     prefixe: "olympia",
     lien: "https://github.com/Johanes-mg/Olympia",
   },
@@ -122,10 +155,14 @@ const PROJETS_DATA = [
     id: "tradevelvet",
     nom: "TradeVelvet",
     categorie: "WEB",
-    description:
-      "Le marketplace où chaque compte devient une boutique. Publie, vends, suis tes vendeurs préférés.",
+    description: {
+      fr: "Le marketplace où chaque compte devient une boutique. Publie, vends, suis tes vendeurs préférés.",
+      en: "The marketplace where every account becomes a shop. Post, sell, follow your favorite sellers.",
+    },
     technologies: "React, Node.js, Express, MySQL",
     vignette: "icontradevelvet",
+    vignetteEn: "icontradevelvet-en.jpg",
+    vignetteFr: "icontradevelvet-fr.png",
     prefixe: "tradevelvet",
     lien: "https://github.com/Johanes-mg/TradeVelvet",
   },
@@ -133,10 +170,13 @@ const PROJETS_DATA = [
     id: "mangachrono",
     nom: "Manga Chrono",
     categorie: "MOBILE",
-    description:
-      "Quiz sur la culture manga et anime : 100 niveaux à débloquer, 100 questions, top chrono",
+    description: {
+      fr: "Quiz sur la culture manga et anime : 100 niveaux à débloquer, 100 questions, top chrono",
+      en: "Quiz about manga and anime culture: 100 levels to unlock, 100 questions, against the clock",
+    },
     technologies: "Kotlin, Android",
     vignette: "iconmangachrono",
+    vignetteExt: "jpg",
     prefixe: "mangachrono",
     lien: "https://github.com/Johanes-mg/MangaChrono",
   },
@@ -144,10 +184,14 @@ const PROJETS_DATA = [
     id: "edt",
     nom: "EDT",
     categorie: "WEB",
-    description:
-      "Éditeur visuel d'emploi du temps scolaire. Créez votre semaine, colorez chaque matière.",
+    description: {
+      fr: "Éditeur visuel d'emploi du temps scolaire. Créez votre semaine, colorez chaque matière.",
+      en: "Visual school timetable editor. Create your week, color each subject.",
+    },
     technologies: "HTML5, CSS3, JavaScript",
     vignette: "iconedt",
+    vignetteEn: "iconedt-en.jpg",
+    vignetteFr: "iconedt-fr.png",
     prefixe: "edt",
     lien: "https://johanes-mg.github.io/EDT",
   },
@@ -155,10 +199,14 @@ const PROJETS_DATA = [
     id: "pointage_sharp",
     nom: "Pointage_sharp",
     categorie: "DESKTOP",
-    description:
-      "Application Desktop pour gérer la présence de votre personnel, sans complication.",
+    description: {
+      fr: "Application Desktop pour gérer la présence de votre personnel, sans complication.",
+      en: "Desktop app to manage your staff attendance, without complications.",
+    },
     technologies: "C#,SQLite",
     vignette: "iconpointagesharp",
+    vignetteEn: "iconpointagesharp-en.jpg",
+    vignetteFr: "iconpointagesharp-fr.png",
     prefixe: "pointagesharp",
     lien: "https://github.com/Johanes-mg/Pointage_sharp",
   },
@@ -166,10 +214,14 @@ const PROJETS_DATA = [
     id: "pointage_rust",
     nom: "Pointage_rust",
     categorie: "DESKTOP",
-    description:
-      "Application Desktop pour gérer la présence de votre personnel, sans complication refaite en pure Rust.",
+    description: {
+      fr: "Application Desktop pour gérer la présence de votre personnel, sans complication refaite en pure Rust.",
+      en: "Desktop app to manage your staff attendance, without complications, rewritten in pure Rust.",
+    },
     technologies: "Rust,SQLite",
     vignette: "iconpointagerust",
+    vignetteEn: "iconpointagerust-en.jpg",
+    vignetteFr: "iconpointagerust-fr.png",
     prefixe: "pointagerust",
     lien: "https://github.com/Johanes-mg/Pointage_rust",
   },
@@ -177,9 +229,14 @@ const PROJETS_DATA = [
     id: "lechapes",
     nom: "Lechapes",
     categorie: "DESKTOP",
-    description: "Éditeur de texte multi-onglets combinant explorateur de fichiers, gestion des encodages, recherche avec double thème et interface multilingue",
+    description: {
+      fr: "Éditeur de texte multi-onglets combinant explorateur de fichiers, gestion des encodages, recherche avec double thème et interface multilingue",
+      en: "Multi-tab text editor combining a file explorer, encoding management, search with dual theme and multilingual interface",
+    },
     technologies: "Rust",
     vignette: "iconlechapes",
+    vignetteEn: "iconlechapes-en.jpg",
+    vignetteFr: "iconlechapes-fr.png",
     prefixe: "lechapes",
     lien: "https://github.com/Johanes-mg/Lechapes",
   },
@@ -187,20 +244,29 @@ const PROJETS_DATA = [
     id: "joinus",
     nom: "Joinus",
     categorie: "DESKTOP",
-    description: "essagerie locale pour réseaux partagés permettant la découverte automatique des personnes connectées et l'échange de messages instantanés.",
+    description: {
+      fr: "Messagerie locale pour réseaux partagés permettant la découverte automatique des personnes connectées et l'échange de messages instantanés.",
+      en: "Local messaging for shared networks with automatic discovery of connected people and instant message exchange.",
+    },
     technologies: "Rust",
     vignette: "iconjoinus",
+    vignetteEn: "iconjoinus-en.jpg",
+    vignetteFr: "iconjoinus-fr.jpg",
     prefixe: "joinus",
     lien: "https://github.com/Johanes-mg/Joinus",
   },
-{
+  {
     id: "eden",
     nom: "Eden",
     categorie: "WEB",
-    description:
-      "Sélection exigeante de logiciels libres, gratuits ou payants, choisis pour leur sobriété et leur absence de suivi",
+    description: {
+      fr: "Sélection exigeante de logiciels libres, gratuits ou payants, choisis pour leur sobriété et leur absence de suivi",
+      en: "Curated selection of free, open-source or paid software, chosen for their lightness and lack of tracking",
+    },
     technologies: "HTML5, CSS3, JavaScript",
     vignette: "iconeden",
+    vignetteEn: "iconeden-en.jpg",
+    vignetteFr: "iconeden-fr.jpg",
     prefixe: "eden",
     lien: "https://johanes-mg.github.io/Eden",
   },
@@ -406,6 +472,40 @@ function urlImage(base) {
   return `./images/projet/${base}.jpg`;
 }
 
+function urlVignetteProjet(projet) {
+  if (projet.vignetteEn || projet.vignetteFr) {
+    if (langueActuelle === "en" && projet.vignetteEn) {
+      return `./images/projet/${projet.vignetteEn}`;
+    }
+    if (langueActuelle === "fr" && projet.vignetteFr) {
+      return `./images/projet/${projet.vignetteFr}`;
+    }
+    if (projet.vignetteEn) return `./images/projet/${projet.vignetteEn}`;
+    if (projet.vignetteFr) return `./images/projet/${projet.vignetteFr}`;
+  }
+
+  if (projet.vignetteExt) {
+    return `./images/projet/${projet.vignette}.${projet.vignetteExt}`;
+  }
+
+  const varianteLangue = IMAGES_MAP.get(`${projet.vignette}-${langueActuelle}`);
+  if (varianteLangue) return `./images/projet/${varianteLangue}`;
+
+  const autreLangue = langueActuelle === "fr" ? "en" : "fr";
+  const varianteAutre = IMAGES_MAP.get(`${projet.vignette}-${autreLangue}`);
+  if (varianteAutre) return `./images/projet/${varianteAutre}`;
+
+  const fallback = IMAGES_MAP.get(projet.vignette);
+  if (fallback) return `./images/projet/${fallback}`;
+
+  return `./images/projet/${projet.vignette}.jpg`;
+}
+
+function descriptionProjet(projet) {
+  if (typeof projet.description === "string") return projet.description;
+  return projet.description[langueActuelle] || projet.description.en || "";
+}
+
 function genererProjetHTML(projet) {
   const t = TRADUCTIONS[langueActuelle] || TRADUCTIONS.en;
   return `
@@ -415,13 +515,13 @@ function genererProjetHTML(projet) {
           <div class="icone-oeil">
             <img src="./images/search.png" alt="" width="32" height="32" loading="lazy" decoding="async" />
           </div>
-          <img src="${urlImage(projet.vignette)}" alt="${projet.nom}" loading="lazy" decoding="async" width="640" height="360" />
+          <img src="${urlVignetteProjet(projet)}" alt="${projet.nom}" loading="lazy" decoding="async" width="640" height="360" />
         </figure>
         <h3 class="titre-projet">${projet.nom}</h3>
         <p class="categorie-projet">${projet.categorie} - ${projet.technologies}</p>
       </a>
       <div class="description-projet">
-        <p>${projet.description}</p>
+        <p>${descriptionProjet(projet)}</p>
       </div>
       <div class="info-projet">
         <a href="${projet.lien}" target="_blank" rel="noopener noreferrer" class="lien-projet">${t.link_label}</a>
@@ -458,6 +558,13 @@ async function ouvrirLightboxProjet(projectId) {
   const images = [];
 
   for (let i = 1; i <= 50; i++) {
+    const fichierLangue = IMAGES_MAP.get(
+      `${projet.prefixe}-${langueActuelle}_${i}`,
+    );
+    if (fichierLangue) {
+      images.push(`./images/projet/${fichierLangue}`);
+      continue;
+    }
     const fichier = IMAGES_MAP.get(`${projet.prefixe}_${i}`);
     if (!fichier) break;
     images.push(`./images/projet/${fichier}`);
@@ -471,7 +578,7 @@ async function ouvrirLightboxProjet(projectId) {
   );
 
   if (images.length === 0) {
-    lightboxImage.src = urlImage(projet.vignette);
+    lightboxImage.src = urlVignetteProjet(projet);
     lightboxTitre.textContent = projet.nom;
     lightboxCounter.textContent = "1 / 1";
   } else {
@@ -839,13 +946,6 @@ if (langueBtn && langueSelect) {
   });
 }
 
-try {
-  const langueSauvegarde = localStorage.getItem("langue");
-  appliquerLangue(langueSauvegarde === "fr" ? "fr" : "en");
-} catch (_) {
-  appliquerLangue("en");
-}
-
 const liensNavigation = document.querySelectorAll("[data-page-nav]");
 const pages = document.querySelectorAll("[data-page]");
 
@@ -921,4 +1021,11 @@ function telechargerCV() {
   document.body.appendChild(lien);
   lien.click();
   document.body.removeChild(lien);
+}
+
+try {
+  const langueSauvegarde = localStorage.getItem("langue");
+  appliquerLangue(langueSauvegarde === "fr" ? "fr" : "en");
+} catch (_) {
+  appliquerLangue("en");
 }
