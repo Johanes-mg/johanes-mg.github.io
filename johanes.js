@@ -206,6 +206,177 @@ const PROJETS_DATA = [
   },
 ];
 
+const TRADUCTIONS = {
+  en: {
+    role_developer: "Developer",
+    role_allrounder: "All-rounder",
+    show_contacts: "Show contacts",
+    contact_email: "Email",
+    contact_phone: "Phone",
+    contact_birthday: "Birthday",
+    contact_birthday_value: "July 13, 2006",
+    contact_location: "Location",
+    contact_location_value: "Fianarantsoa, Madagascar",
+    nav_about: "About",
+    nav_career: "Career",
+    nav_skills: "Skills",
+    nav_projects: "Projects",
+    nav_contact: "Contact",
+    about_title: "About me",
+    about_p1:
+      "I am RANAIVOJAONA Falitiana Johanès, a passionate developer based in Fianarantsoa, Madagascar. I work on various projects ranging from desktop and mobile development to the web, as well as multimedia creation. I enjoy turning complex problems into simple, functional and aesthetic solutions.",
+    about_p2:
+      "My goal is to create performant, ergonomic and visually appealing applications. I master several languages and technologies and adapt quickly to the needs of each project. I am also passionate about music, design and content creation.",
+    services_title: "What I do",
+    service_desktop_mobile_title: "Desktop & Mobile Development",
+    service_desktop_mobile_text:
+      "Design of desktop applications with C++, C#, Python, Qt6 and Android mobile applications with Kotlin.",
+    service_web_title: "Web Development",
+    service_web_text:
+      "Design of websites and web applications with HTML, CSS, JavaScript, PHP, React and databases.",
+    service_multi_title: "Multimedia",
+    service_multi_text:
+      "Creation of visual and audio content: graphic design, music production and UI/UX Design.",
+    service_office_title: "Office Suites",
+    service_office_text:
+      "Mastery of Microsoft Office (Word, Excel, PowerPoint, Access) for data management, analysis and presentation.",
+    cv_title: "Resume",
+    cv_description: "Download my resume for a summary",
+    cv_download: "Download",
+    career_title: "Career",
+    career_academic: "Academic",
+    career_l2: "Second year of Bachelor's degree",
+    career_l2_text: "École Nationale d'Informatique de Fianarantsoa.",
+    career_l1: "First year of Bachelor's degree",
+    career_l1_text: "École Nationale d'Informatique de Fianarantsoa.",
+    career_bac: "Baccalaureate",
+    career_bac_text: "Baccalaureate series D.",
+    career_bepc: "BEPC",
+    career_bepc_text: "Brevet d'Études du Premier Cycle.",
+    career_cepe: "CEPE",
+    career_cepe_text: "Certificat d'Études Primaires Élémentaires.",
+    career_training: "Training",
+    career_fr: "French",
+    career_fr_text: "Alliance Française de Fianarantsoa",
+    career_en: "English",
+    career_en_text: "International Tesol/TEFL Training Institute",
+    career_office: "Office suite at CFEI",
+    career_office_text:
+      "Centre de Formation en Électronique et Informatique.",
+    career_experience: "Experience",
+    career_personal: "Personal Projects",
+    career_personal_text:
+      "Development of web, mobile and desktop applications presented in the Projects section.",
+    skills_title: "My skills",
+    skills_office: "Office Suites",
+    skills_web: "Web Development",
+    skills_desktop: "Desktop Development",
+    skills_mobile: "Mobile Development",
+    skills_db: "Databases",
+    skills_os: "Operating Systems",
+    skills_design: "Multimedia & Design",
+    skills_languages: "Languages",
+    skills_licenses: "Driving licenses",
+    projects_title: "Projects",
+    filter_all: "All",
+    filter_web: "Web",
+    filter_mobile: "Mobile",
+    filter_desktop: "Desktop",
+    filter_select: "Select a category",
+    contact_title: "Contact",
+    contact_intro: "Choose your preferred contact method:",
+    contact_button: "Contact",
+    profile_picture: "Profile picture",
+    link_label: "Link",
+    view_project: "View project",
+  },
+  fr: {
+    role_developer: "Développeur",
+    role_allrounder: "All-rounder",
+    show_contacts: "Afficher les contacts",
+    contact_email: "Email",
+    contact_phone: "Téléphone",
+    contact_birthday: "Anniversaire",
+    contact_birthday_value: "13 Juillet 2006",
+    contact_location: "Localisation",
+    contact_location_value: "Fianarantsoa, Madagascar",
+    nav_about: "À propos",
+    nav_career: "Parcours",
+    nav_skills: "Compétences",
+    nav_projects: "Projets",
+    nav_contact: "Contact",
+    about_title: "À propos de moi",
+    about_p1:
+      "Je suis RANAIVOJAONA Falitiana Johanès, un développeur passionné basé à Fianarantsoa, Madagascar. Je travaille sur divers projets allant du développement desktop et mobile au web, en passant par la création multimédia. J'aime transformer des problèmes complexes en solutions simples, fonctionnelles et esthétiques.",
+    about_p2:
+      "Mon objectif est de créer des applications performantes, ergonomiques et visuellement attrayantes. Je maîtrise plusieurs langages et technologies et je m'adapte rapidement aux besoins de chaque projet. Je suis également passionné par la musique, le design et la création de contenu.",
+    services_title: "Ce que je fais",
+    service_desktop_mobile_title: "Développement Desktop & Mobile",
+    service_desktop_mobile_text:
+      "Conception d'applications desktop avec C++, C#, Python, Qt6 et d'applications mobiles Android avec Kotlin.",
+    service_web_title: "Développement Web",
+    service_web_text:
+      "Conception de sites web et applications web avec HTML, CSS, JavaScript, PHP, React et bases de données.",
+    service_multi_title: "Multimédia",
+    service_multi_text:
+      "Création de contenu visuel et audio : design graphique, production musicale et UI/UX Design.",
+    service_office_title: "Bureautique",
+    service_office_text:
+      "Maîtrise de la suite Microsoft Office (Word, Excel, PowerPoint, Access) pour la gestion, l'analyse et la présentation de données.",
+    cv_title: "Curriculum Vitæ",
+    cv_description: "Télécharger mon CV pour avoir le résumé",
+    cv_download: "Télécharger",
+    career_title: "Parcours",
+    career_academic: "Académique",
+    career_l2: "Deuxième année de Licence",
+    career_l2_text: "École Nationale d'Informatique de Fianarantsoa.",
+    career_l1: "Première année de Licence",
+    career_l1_text: "École Nationale d'Informatique de Fianarantsoa.",
+    career_bac: "Baccalauréat",
+    career_bac_text: "Baccalauréat série D.",
+    career_bepc: "BEPC",
+    career_bepc_text: "Brevet d'Études du Premier Cycle.",
+    career_cepe: "CEPE",
+    career_cepe_text: "Certificat d'Études Primaires Élémentaires.",
+    career_training: "Formation",
+    career_fr: "Français",
+    career_fr_text: "Alliance Française de Fianarantsoa",
+    career_en: "Anglais",
+    career_en_text: "International Tesol/TEFL Training Institute",
+    career_office: "Bureautique à CFEI",
+    career_office_text:
+      "Centre de Formation en Électronique et Informatique.",
+    career_experience: "Expérience",
+    career_personal: "Projets Personnels",
+    career_personal_text:
+      "Développement d'applications web, mobiles et desktop présentées dans la section Projets.",
+    skills_title: "Mes compétences",
+    skills_office: "Bureautiques",
+    skills_web: "Développement Web",
+    skills_desktop: "Développement Desktop",
+    skills_mobile: "Développement Mobile",
+    skills_db: "Bases de données",
+    skills_os: "Systèmes d'exploitation",
+    skills_design: "Multimédia & Design",
+    skills_languages: "Langues",
+    skills_licenses: "Permis de conduire",
+    projects_title: "Projets",
+    filter_all: "Tous",
+    filter_web: "Web",
+    filter_mobile: "Mobile",
+    filter_desktop: "Desktop",
+    filter_select: "Sélectionner une catégorie",
+    contact_title: "Contact",
+    contact_intro: "Choisissez votre méthode de contact préférée :",
+    contact_button: "Contacter",
+    profile_picture: "Photo de profil",
+    link_label: "Lien",
+    view_project: "Voir le projet",
+  },
+};
+
+let langueActuelle = "en";
+
 const IMAGES_MAP = new Map();
 
 const listeProjets = document.getElementById("liste-projets");
@@ -236,9 +407,10 @@ function urlImage(base) {
 }
 
 function genererProjetHTML(projet) {
+  const t = TRADUCTIONS[langueActuelle] || TRADUCTIONS.en;
   return `
     <li class="item-projet actif" data-filtre-item data-categorie="${projet.categorie}" data-projet-id="${projet.id}">
-      <a href="#" onclick="ouvrirLightboxProjet('${projet.id}'); return false;" aria-label="Voir le projet ${projet.nom}">
+      <a href="#" onclick="ouvrirLightboxProjet('${projet.id}'); return false;" aria-label="${t.view_project} ${projet.nom}">
         <figure class="image-projet">
           <div class="icone-oeil">
             <img src="./images/search.png" alt="" width="32" height="32" loading="lazy" decoding="async" />
@@ -252,7 +424,7 @@ function genererProjetHTML(projet) {
         <p>${projet.description}</p>
       </div>
       <div class="info-projet">
-        <a href="${projet.lien}" target="_blank" rel="noopener noreferrer" class="lien-projet">Lien</a>
+        <a href="${projet.lien}" target="_blank" rel="noopener noreferrer" class="lien-projet">${t.link_label}</a>
       </div>
     </li>
   `;
@@ -346,7 +518,8 @@ if (avatar && lightboxOverlay) {
 
     isLightboxProjet = false;
     lightboxImage.src = avatar.src;
-    lightboxTitre.textContent = "Photo de profil";
+    const t = TRADUCTIONS[langueActuelle] || TRADUCTIONS.en;
+    lightboxTitre.textContent = t.profile_picture;
     lightboxCounter.textContent = "1 / 1";
 
     navButtons.forEach((btn) => (btn.style.display = "none"));
@@ -600,18 +773,91 @@ btnContact?.addEventListener("click", () => {
   if (info) window.open(info.url, "_blank");
 });
 
+const langueBtn = document.querySelector("[data-langue-btn]");
+const langueSelect = document.querySelector("[data-langue-select]");
+const langueDrapeau = document.querySelector("[data-langue-drapeau]");
+const langueNom = document.querySelector("[data-langue-nom]");
+const langueItems = document.querySelectorAll("[data-langue-item]");
+
+function appliquerLangue(langue) {
+  langueActuelle = langue;
+  const trad = TRADUCTIONS[langue];
+  if (!trad) return;
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const cle = el.dataset.i18n;
+    if (trad[cle] !== undefined) {
+      el.textContent = trad[cle];
+    }
+  });
+
+  if (langueDrapeau) {
+    langueDrapeau.textContent = langue === "fr" ? "🇫🇷" : "🇬🇧";
+  }
+  if (langueNom) {
+    langueNom.textContent = langue === "fr" ? "Français" : "English";
+  }
+
+  try {
+    localStorage.setItem("langue", langue);
+  } catch (_) {}
+
+  document.documentElement.lang = langue;
+
+  if (projetsGeneres && listeProjets) {
+    listeProjets.innerHTML = PROJETS_DATA.map(genererProjetHTML).join("");
+    const actif = document.querySelector("[data-btn-filtre].actif");
+    if (actif) {
+      filtrerProjets(actif.dataset.categorie || "tous");
+    }
+  }
+}
+
+if (langueBtn && langueSelect) {
+  langueBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    langueSelect.classList.toggle("actif");
+    langueBtn.setAttribute(
+      "aria-expanded",
+      langueSelect.classList.contains("actif") ? "true" : "false",
+    );
+  });
+
+  langueItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      appliquerLangue(item.dataset.langue);
+      langueSelect.classList.remove("actif");
+      langueBtn?.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!langueSelect.contains(e.target)) {
+      langueSelect.classList.remove("actif");
+      langueBtn?.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+try {
+  const langueSauvegarde = localStorage.getItem("langue");
+  appliquerLangue(langueSauvegarde === "fr" ? "fr" : "en");
+} catch (_) {
+  appliquerLangue("en");
+}
+
 const liensNavigation = document.querySelectorAll("[data-page-nav]");
 const pages = document.querySelectorAll("[data-page]");
 
 liensNavigation.forEach((lien) => {
   lien.addEventListener("click", function () {
-    const nomPage = this.textContent.toLowerCase().trim();
+    const cible = this.dataset.pageTarget;
 
-    if (nomPage === "projets") genererProjetsSiBesoin();
+    if (cible === "projets") genererProjetsSiBesoin();
 
     pages.forEach((page) => {
       const nomPageActuelle = page.dataset.page.toLowerCase().trim();
-      page.classList.toggle("actif", nomPage === nomPageActuelle);
+      page.classList.toggle("actif", cible === nomPageActuelle);
     });
 
     liensNavigation.forEach((nav) => {

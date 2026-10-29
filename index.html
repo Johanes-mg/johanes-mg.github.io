@@ -62,8 +62,8 @@
 
           <div class="contenu-info">
             <h1 class="nom" title="Johanès">Johanès Falitiana</h1>
-            <p class="titre">Développeur</p>
-            <p class="titre">All-rounder</p>
+            <p class="titre" data-i18n="role_developer">Développeur</p>
+            <p class="titre" data-i18n="role_allrounder">All-rounder</p>
           </div>
 
           <button
@@ -71,7 +71,7 @@
             data-btn-info
             aria-label="Afficher les contacts"
           >
-            <span>Afficher les contacts</span>
+            <span data-i18n="show_contacts">Afficher les contacts</span>
             <img
               src="./images/icone-fleche-bas.png"
               alt=""
@@ -108,6 +108,42 @@
                 </span>
               </span>
             </label>
+
+            <div class="langue-select" data-langue-select>
+              <button
+                class="langue-btn"
+                data-langue-btn
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-label="Choisir la langue"
+              >
+                <span class="langue-drapeau" data-langue-drapeau>🇬🇧</span>
+                <span class="langue-nom" data-langue-nom>English</span>
+                <span class="langue-fleche">
+                  <img
+                    src="./images/icone-fleche-bas.png"
+                    alt=""
+                    width="14"
+                    height="14"
+                    decoding="async"
+                  />
+                </span>
+              </button>
+              <ul class="langue-liste" role="listbox" data-langue-liste>
+                <li role="option">
+                  <button data-langue-item data-langue="en">
+                    <span class="langue-drapeau">🇬🇧</span>
+                    <span class="langue-nom">English</span>
+                  </button>
+                </li>
+                <li role="option">
+                  <button data-langue-item data-langue="fr">
+                    <span class="langue-drapeau">🇫🇷</span>
+                    <span class="langue-nom">Français</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div class="separateur"></div>
@@ -124,7 +160,7 @@
                 />
               </div>
               <div class="info-contact">
-                <p class="titre-contact">Email</p>
+                <p class="titre-contact" data-i18n="contact_email">Email</p>
                 <a href="mailto:falitianajohanes@gmail.com" class="lien-contact"
                   >falitianajohanes@gmail.com</a
                 >
@@ -142,7 +178,7 @@
                 />
               </div>
               <div class="info-contact">
-                <p class="titre-contact">Téléphone</p>
+                <p class="titre-contact" data-i18n="contact_phone">Téléphone</p>
                 <a href="tel:+261387587959" class="lien-contact">0387587959</a>
               </div>
             </li>
@@ -158,8 +194,8 @@
                 />
               </div>
               <div class="info-contact">
-                <p class="titre-contact">Anniversaire</p>
-                <time datetime="2006-07-13">13 Juillet 2006</time>
+                <p class="titre-contact" data-i18n="contact_birthday">Anniversaire</p>
+                <time datetime="2006-07-13" data-i18n="contact_birthday_value">13 Juillet 2006</time>
               </div>
             </li>
 
@@ -174,8 +210,8 @@
                 />
               </div>
               <div class="info-contact">
-                <p class="titre-contact">Localisation</p>
-                <address>Fianarantsoa, Madagascar</address>
+                <p class="titre-contact" data-i18n="contact_location">Localisation</p>
+                <address data-i18n="contact_location_value">Fianarantsoa, Madagascar</address>
               </div>
             </li>
           </ul>
@@ -239,39 +275,39 @@
         <nav class="navigation" aria-label="Navigation principale">
           <ul class="liste-navigation">
             <li class="item-nav">
-              <button class="lien-nav actif" data-page-nav aria-current="page">
+              <button class="lien-nav actif" data-page-nav data-page-target="à propos" aria-current="page" data-i18n="nav_about">
                 À propos
               </button>
             </li>
             <li class="item-nav">
-              <button class="lien-nav" data-page-nav>Parcours</button>
+              <button class="lien-nav" data-page-nav data-page-target="parcours" data-i18n="nav_career">Parcours</button>
             </li>
             <li class="item-nav">
-              <button class="lien-nav" data-page-nav>Compétences</button>
+              <button class="lien-nav" data-page-nav data-page-target="compétences" data-i18n="nav_skills">Compétences</button>
             </li>
             <li class="item-nav">
-              <button class="lien-nav" data-page-nav>Projets</button>
+              <button class="lien-nav" data-page-nav data-page-target="projets" data-i18n="nav_projects">Projets</button>
             </li>
             <li class="item-nav">
-              <button class="lien-nav" data-page-nav>Contact</button>
+              <button class="lien-nav" data-page-nav data-page-target="contact" data-i18n="nav_contact">Contact</button>
             </li>
           </ul>
         </nav>
 
         <article class="page page-a-propos actif" data-page="à propos">
           <header>
-            <h2 class="titre-article">À propos de moi</h2>
+            <h2 class="titre-article" data-i18n="about_title">À propos de moi</h2>
           </header>
 
           <section class="texte-a-propos">
-            <p>
+            <p data-i18n="about_p1">
               Je suis RANAIVOJAONA Falitiana Johanès, un développeur passionné
               basé à Fianarantsoa, Madagascar. Je travaille sur divers projets
               allant du développement desktop et mobile au web, en passant par
               la création multimédia. J'aime transformer des problèmes complexes
               en solutions simples, fonctionnelles et esthétiques.
             </p>
-            <p>
+            <p data-i18n="about_p2">
               Mon objectif est de créer des applications performantes,
               ergonomiques et visuellement attrayantes. Je maîtrise plusieurs
               langages et technologies et je m'adapte rapidement aux besoins de
@@ -281,7 +317,7 @@
           </section>
 
           <section class="services">
-            <h3 class="titre-service">Ce que je fais</h3>
+            <h3 class="titre-service" data-i18n="services_title">Ce que je fais</h3>
 
             <ul class="liste-services">
               <li class="item-service">
@@ -296,10 +332,10 @@
                   />
                 </div>
                 <div class="contenu-service">
-                  <h4 class="titre-item-service">
+                  <h4 class="titre-item-service" data-i18n="service_desktop_mobile_title">
                     Développement Desktop &amp; Mobile
                   </h4>
-                  <p class="texte-service">
+                  <p class="texte-service" data-i18n="service_desktop_mobile_text">
                     Conception d'applications desktop avec C++, C#, Python, Qt6
                     et d'applications mobiles Android avec Kotlin.
                   </p>
@@ -318,8 +354,8 @@
                   />
                 </div>
                 <div class="contenu-service">
-                  <h4 class="titre-item-service">Développement Web</h4>
-                  <p class="texte-service">
+                  <h4 class="titre-item-service" data-i18n="service_web_title">Développement Web</h4>
+                  <p class="texte-service" data-i18n="service_web_text">
                     Conception de sites web et applications web avec HTML, CSS,
                     JavaScript, PHP, React et bases de données.
                   </p>
@@ -338,8 +374,8 @@
                   />
                 </div>
                 <div class="contenu-service">
-                  <h4 class="titre-item-service">Multimédia</h4>
-                  <p class="texte-service">
+                  <h4 class="titre-item-service" data-i18n="service_multi_title">Multimédia</h4>
+                  <p class="texte-service" data-i18n="service_multi_text">
                     Création de contenu visuel et audio : design graphique,
                     production musicale et UI/UX Design.
                   </p>
@@ -358,8 +394,8 @@
                   />
                 </div>
                 <div class="contenu-service">
-                  <h4 class="titre-item-service">Bureautique</h4>
-                  <p class="texte-service">
+                  <h4 class="titre-item-service" data-i18n="service_office_title">Bureautique</h4>
+                  <p class="texte-service" data-i18n="service_office_text">
                     Maîtrise de la suite Microsoft Office (Word, Excel,
                     PowerPoint, Access) pour la gestion, l'analyse et la
                     présentation de données.
@@ -370,9 +406,9 @@
           </section>
 
           <section class="section-cv">
-            <h3 class="titre-service">Curriculum Vitæ</h3>
+            <h3 class="titre-service" data-i18n="cv_title">Curriculum Vitæ</h3>
             <div class="cv-container">
-              <p class="cv-description">
+              <p class="cv-description" data-i18n="cv_description">
                 Télécharger mon CV pour avoir le résumé
               </p>
               <div class="cv-boutons">
@@ -388,7 +424,7 @@
                     loading="lazy"
                     decoding="async"
                   />
-                  Télécharger
+                  <span data-i18n="cv_download">Télécharger</span>
                 </button>
               </div>
             </div>
@@ -397,7 +433,7 @@
 
         <article class="page page-parcours" data-page="parcours">
           <header>
-            <h2 class="titre-article">Parcours</h2>
+            <h2 class="titre-article" data-i18n="career_title">Parcours</h2>
           </header>
 
           <section class="ligne-temps">
@@ -412,38 +448,38 @@
                   decoding="async"
                 />
               </div>
-              <h3 class="titre-section">Académique</h3>
+              <h3 class="titre-section" data-i18n="career_academic">Académique</h3>
             </div>
 
             <ol class="liste-ligne-temps">
               <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">Deuxième année de Licence</h4>
+                <h4 class="titre-item-ligne" data-i18n="career_l2">Deuxième année de Licence</h4>
                 <span>2025 - 2026</span>
-                <p class="texte-ligne">
+                <p class="texte-ligne" data-i18n="career_l2_text">
                   École Nationale d'Informatique de Fianarantsoa.
                 </p>
               </li>
               <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">Première année de Licence</h4>
+                <h4 class="titre-item-ligne" data-i18n="career_l1">Première année de Licence</h4>
                 <span>2024 - 2025</span>
-                <p class="texte-ligne">
+                <p class="texte-ligne" data-i18n="career_l1_text">
                   École Nationale d'Informatique de Fianarantsoa.
                 </p>
               </li>
               <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">Baccalauréat</h4>
+                <h4 class="titre-item-ligne" data-i18n="career_bac">Baccalauréat</h4>
                 <span>2024</span>
-                <p class="texte-ligne">Baccalauréat série D.</p>
+                <p class="texte-ligne" data-i18n="career_bac_text">Baccalauréat série D.</p>
               </li>
               <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">BEPC</h4>
+                <h4 class="titre-item-ligne" data-i18n="career_bepc">BEPC</h4>
                 <span>2021</span>
-                <p class="texte-ligne">Brevet d'Études du Premier Cycle.</p>
+                <p class="texte-ligne" data-i18n="career_bepc_text">Brevet d'Études du Premier Cycle.</p>
               </li>
               <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">CEPE</h4>
+                <h4 class="titre-item-ligne" data-i18n="career_cepe">CEPE</h4>
                 <span>2017</span>
-                <p class="texte-ligne">
+                <p class="texte-ligne" data-i18n="career_cepe_text">
                   Certificat d'Études Primaires Élémentaires.
                 </p>
               </li>
@@ -462,26 +498,26 @@
                   decoding="async"
                 />
               </div>
-              <h3 class="titre-section">Formation</h3>
+              <h3 class="titre-section" data-i18n="career_training">Formation</h3>
             </div>
 
             <ol class="liste-ligne-temps">
               <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">Français</h4>
+                <h4 class="titre-item-ligne" data-i18n="career_fr">Français</h4>
                 <span>2026</span>
-                <p class="texte-ligne">Alliance Française de Fianarantsoa</p>
+                <p class="texte-ligne" data-i18n="career_fr_text">Alliance Française de Fianarantsoa</p>
               </li>
               <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">Anglais</h4>
+                <h4 class="titre-item-ligne" data-i18n="career_en">Anglais</h4>
                 <span>2024 - 2025</span>
-                <p class="texte-ligne">
+                <p class="texte-ligne" data-i18n="career_en_text">
                   International Tesol/TEFL Training Institute
                 </p>
               </li>
               <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">Bureautique à CFEI</h4>
+                <h4 class="titre-item-ligne" data-i18n="career_office">Bureautique à CFEI</h4>
                 <span>2024</span>
-                <p class="texte-ligne">
+                <p class="texte-ligne" data-i18n="career_office_text">
                   Centre de Formation en Électronique et Informatique.
                 </p>
               </li>
@@ -500,14 +536,14 @@
                   decoding="async"
                 />
               </div>
-              <h3 class="titre-section">Expérience</h3>
+              <h3 class="titre-section" data-i18n="career_experience">Expérience</h3>
             </div>
 
             <ol class="liste-ligne-temps">
               <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">Projets Personnels</h4>
+                <h4 class="titre-item-ligne" data-i18n="career_personal">Projets Personnels</h4>
                 <span>2024 - Présent</span>
-                <p class="texte-ligne">
+                <p class="texte-ligne" data-i18n="career_personal_text">
                   Développement d'applications web, mobiles et desktop
                   présentées dans la section Projets.
                 </p>
@@ -518,7 +554,7 @@
 
         <article class="page page-competences" data-page="compétences">
           <header>
-            <h2 class="titre-article">Mes compétences</h2>
+            <h2 class="titre-article" data-i18n="skills_title">Mes compétences</h2>
           </header>
 
           <section class="competences">
@@ -534,7 +570,7 @@
                     decoding="async"
                   />
                 </div>
-                <h3 class="titre-categorie">Bureautiques</h3>
+                <h3 class="titre-categorie" data-i18n="skills_office">Bureautiques</h3>
               </div>
               <ul class="liste-competences">
                 <li class="item-competence carte-contenu">
@@ -597,7 +633,7 @@
                     decoding="async"
                   />
                 </div>
-                <h3 class="titre-categorie">Développement Web</h3>
+                <h3 class="titre-categorie" data-i18n="skills_web">Développement Web</h3>
               </div>
               <ul class="liste-competences">
                 <li class="item-competence carte-contenu">
@@ -690,7 +726,7 @@
                     decoding="async"
                   />
                 </div>
-                <h3 class="titre-categorie">Développement Desktop</h3>
+                <h3 class="titre-categorie" data-i18n="skills_desktop">Développement Desktop</h3>
               </div>
               <ul class="liste-competences">
                 <li class="item-competence carte-contenu">
@@ -783,7 +819,7 @@
                     decoding="async"
                   />
                 </div>
-                <h3 class="titre-categorie">Développement Mobile</h3>
+                <h3 class="titre-categorie" data-i18n="skills_mobile">Développement Mobile</h3>
               </div>
               <ul class="liste-competences">
                 <li class="item-competence carte-contenu">
@@ -816,7 +852,7 @@
                     decoding="async"
                   />
                 </div>
-                <h3 class="titre-categorie">Bases de données</h3>
+                <h3 class="titre-categorie" data-i18n="skills_db">Bases de données</h3>
               </div>
               <ul class="liste-competences">
                 <li class="item-competence carte-contenu">
@@ -849,7 +885,7 @@
                     decoding="async"
                   />
                 </div>
-                <h3 class="titre-categorie">Systèmes d'exploitation</h3>
+                <h3 class="titre-categorie" data-i18n="skills_os">Systèmes d'exploitation</h3>
               </div>
               <ul class="liste-competences">
                 <li class="item-competence carte-contenu">
@@ -897,7 +933,7 @@
                     decoding="async"
                   />
                 </div>
-                <h3 class="titre-categorie">Multimédia &amp; Design</h3>
+                <h3 class="titre-categorie" data-i18n="skills_design">Multimédia &amp; Design</h3>
               </div>
               <ul class="liste-competences">
                 <li class="item-competence carte-contenu">
@@ -960,7 +996,7 @@
                     decoding="async"
                   />
                 </div>
-                <h3 class="titre-categorie">Langues</h3>
+                <h3 class="titre-categorie" data-i18n="skills_languages">Langues</h3>
               </div>
               <ul class="liste-competences">
                 <li class="item-competence carte-contenu">
@@ -1023,7 +1059,7 @@
                     decoding="async"
                   />
                 </div>
-                <h3 class="titre-categorie">Permis de conduire</h3>
+                <h3 class="titre-categorie" data-i18n="skills_licenses">Permis de conduire</h3>
               </div>
               <ul class="liste-competences">
                 <li class="item-competence carte-contenu">
@@ -1063,7 +1099,7 @@
 
         <article class="page page-projets" data-page="projets">
           <header>
-            <h2 class="titre-article">Projets</h2>
+            <h2 class="titre-article" data-i18n="projects_title">Projets</h2>
           </header>
 
           <section class="projets">
@@ -1074,6 +1110,7 @@
                   data-btn-filtre
                   aria-selected="true"
                   data-categorie="tous"
+                  data-i18n="filter_all"
                 >
                   Tous
                 </button>
@@ -1083,6 +1120,7 @@
                   data-btn-filtre
                   aria-selected="false"
                   data-categorie="WEB"
+                  data-i18n="filter_web"
                 >
                   Web
                 </button>
@@ -1092,6 +1130,7 @@
                   data-btn-filtre
                   aria-selected="false"
                   data-categorie="MOBILE"
+                  data-i18n="filter_mobile"
                 >
                   Mobile
                 </button>
@@ -1101,6 +1140,7 @@
                   data-btn-filtre
                   aria-selected="false"
                   data-categorie="DESKTOP"
+                  data-i18n="filter_desktop"
                 >
                   Desktop
                 </button>
@@ -1114,7 +1154,7 @@
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                <span class="valeur-select" data-select-valeur
+                <span class="valeur-select" data-select-valeur data-i18n="filter_select"
                   >Sélectionner une catégorie</span
                 >
                 <span class="icone-select">
@@ -1130,18 +1170,18 @@
               </button>
               <ul class="liste-select" role="listbox">
                 <li class="item-select" role="option">
-                  <button data-select-item data-categorie="tous">Tous</button>
+                  <button data-select-item data-categorie="tous" data-i18n="filter_all">Tous</button>
                 </li>
                 <li class="item-select" role="option">
-                  <button data-select-item data-categorie="WEB">Web</button>
+                  <button data-select-item data-categorie="WEB" data-i18n="filter_web">Web</button>
                 </li>
                 <li class="item-select" role="option">
-                  <button data-select-item data-categorie="MOBILE">
+                  <button data-select-item data-categorie="MOBILE" data-i18n="filter_mobile">
                     Mobile
                   </button>
                 </li>
                 <li class="item-select" role="option">
-                  <button data-select-item data-categorie="DESKTOP">
+                  <button data-select-item data-categorie="DESKTOP" data-i18n="filter_desktop">
                     Desktop
                   </button>
                 </li>
@@ -1154,11 +1194,11 @@
 
         <article class="page page-contact" data-page="contact">
           <header>
-            <h2 class="titre-article">Contact</h2>
+            <h2 class="titre-article" data-i18n="contact_title">Contact</h2>
           </header>
 
           <section class="contact-section">
-            <p class="contact-intro">
+            <p class="contact-intro" data-i18n="contact_intro">
               Choisissez votre méthode de contact préférée :
             </p>
 
@@ -1224,7 +1264,7 @@
                   loading="lazy"
                   decoding="async"
                 />
-                <span>Contacter</span>
+                <span data-i18n="contact_button">Contacter</span>
               </button>
             </div>
 
