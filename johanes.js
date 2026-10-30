@@ -263,7 +263,7 @@ const PROJETS_DATA = [
       fr: "Sélection exigeante de logiciels libres, gratuits ou payants, choisis pour leur sobriété et leur absence de suivi",
       en: "Curated selection of free, open-source or paid software, chosen for their lightness and lack of tracking",
     },
-    technologies: "HTML5, CSS3, JavaScript",
+    technologies: "HTML5, TailwindCSS, JavaScript",
     vignette: "iconeden",
     vignetteEn: "iconeden-en.jpg",
     vignetteFr: "iconeden-fr.jpg",
