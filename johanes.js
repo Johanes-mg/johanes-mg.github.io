@@ -270,6 +270,21 @@ const PROJETS_DATA = [
     prefixe: "eden",
     lien: "https://johanes-mg.github.io/Eden",
   },
+  {
+    id: "jhoteldesktop",
+    nom: "JHotel Desktop",
+    categorie: "DESKTOP",
+    description: {
+      fr: "Application desktop de gestion hôtelière en Rust: chambres, clients, réservations et occupations dans une interface fluide et moderne.",
+      en: "Rust desktop app for hotel management: rooms, guests, bookings and occupancy in a smooth, modern interface.",
+    },
+    technologies: "Rust",
+    vignette: "iconjhoteldesktop",
+    vignetteEn: "iconjhoteldesktop-en.jpg",
+    vignetteFr: "iconjhoteldesktop-fr.jpg",
+    prefixe: "jhoteldesktop",
+    lien: "https://github.com/Johanes-mg/JHotelDesktop",
+  },
 ];
 
 const TRADUCTIONS = {
