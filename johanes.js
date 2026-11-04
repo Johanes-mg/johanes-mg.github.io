@@ -275,7 +275,7 @@ const PROJETS_DATA = [
     nom: "JHotel Desktop",
     categorie: "DESKTOP",
     description: {
-      fr: "Application desktop de gestion hôtelière en Rust: chambres, clients, réservations et occupations dans une interface fluide et moderne.",
+      fr: "Application desktop de gestion hôtelière: chambres, clients, réservations et occupations dans une interface fluide et moderne.",
       en: "Rust desktop app for hotel management: rooms, guests, bookings and occupancy in a smooth, modern interface.",
     },
     technologies: "Rust",
