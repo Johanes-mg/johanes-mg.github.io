@@ -285,6 +285,35 @@ const PROJETS_DATA = [
     prefixe: "jhoteldesktop",
     lien: "https://github.com/Johanes-mg/JHotelDesktop",
   },
+  {
+    id: "sumi",
+    nom: "Sumi",
+    categorie: "MOBILE",
+    description: {
+      fr: "Gestion de calendriers personnels et synchronisation multi-appareils sur Android.",
+      en: "Personal calendar management and multi-device sync for Android.",
+    },
+    technologies: "Kotlin, Android",
+    vignette: "iconsumi",
+    vignetteEn: "iconsumi-en.jpg",
+    vignetteFr: "iconsumi-fr.jpg",
+    prefixe: "sumikotlin",
+    lien: "https://github.com/Johanes-mg/Sumi",
+  },
+  {
+    id: "omniprint",
+    nom: "OmniPrint",
+    categorie: "DESKTOP",
+    description: {
+      fr: "Serveur d'impression local pour Windows, depuis n'importe quel navigateur du réseau local.",
+      en: "A local Windows print server, accessible from any browser on your LAN.",
+    },
+    technologies: "Rust,SQLite",
+    vignette: "iconomniprint",
+    vignetteExt: "jpg",
+    prefixe: "omniprint",
+    lien: "https://github.com/Johanes-mg/OmniPrint",
+  },
 ];
 
 const TRADUCTIONS = {
