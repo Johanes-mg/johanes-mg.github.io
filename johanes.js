@@ -96,20 +96,6 @@ const PROJETS_DATA = [
     lien: "https://github.com/Johanes-mg/JNotes",
   },
   {
-    id: "jhotel",
-    nom: "JHotel",
-    categorie: "MOBILE",
-    description: {
-      fr: "Application de gestion hôtelière : réservation des chambres, gestion des clients et facturation.",
-      en: "Hotel management app: room booking, client management and billing.",
-    },
-    technologies: "Kotlin, Android",
-    vignette: "iconjhotel",
-    vignetteExt: "png",
-    prefixe: "jhotelkotlin",
-    lien: "https://github.com/Johanes-mg/JHotel",
-  },
-  {
     id: "marv",
     nom: "Marv",
     categorie: "WEB",
