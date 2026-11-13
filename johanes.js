@@ -300,6 +300,20 @@ const PROJETS_DATA = [
     prefixe: "omniprint",
     lien: "https://github.com/Johanes-mg/OmniPrint",
   },
+  {
+    id: "tsiamba",
+    nom: "Tsiamba",
+    categorie: "MOBILE",
+    description: {
+      fr: "Application de Gestionnaire de Mot de passe sécurisé et chiffrés.",
+      en: "Secure and Encrypted Password Manager App.",
+    },
+    technologies: "Kotlin, Android",
+    vignette: "Tsiamba",
+    vignetteExt: "jpg",
+    prefixe: "tsiamba",
+    lien: "https://github.com/Johanes-mg/Tsiamba",
+  },
 ];
 
 const TRADUCTIONS = {
