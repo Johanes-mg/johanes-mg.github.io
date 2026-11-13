@@ -309,7 +309,7 @@ const PROJETS_DATA = [
       en: "Secure and Encrypted Password Manager App.",
     },
     technologies: "Kotlin, Android",
-    vignette: "Tsiamba",
+    vignette: "icontsiamba",
     vignetteExt: "jpg",
     prefixe: "tsiamba",
     lien: "https://github.com/Johanes-mg/Tsiamba",
